@@ -1,0 +1,39 @@
+#home-1{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    .content{
+        width: 60%;
+    }
+
+    h1{
+        min-width: 16ch;
+    }
+    .text{
+        margin: $spacing-md 0 0;
+    }
+}
+
+.deco-home{
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    right: 75px;
+    width: auto;
+    height: clamp(250px, 60vh, 600px);
+    opacity: .5;
+    pointer-events: none;
+    img{
+        height: 100%;
+        width: 100%;
+    }
+    &.spatios{
+        right: 20%;
+        opacity: 1;
+        animation: floating-home 7s ease infinite;
+    }
+    &.planets{
+        z-index: -1;
+    }
+}
