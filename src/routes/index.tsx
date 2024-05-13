@@ -9,8 +9,8 @@ import Form from "./section/form/form";
 export default component$(() => (
     <>
         <Intro/>
-        <Skill/>
-        <Portfolio/>
+        {/* <Skill/> */}
+        {/* <Portfolio/> */}
         <Website/>
         <Form/>
         {/* scroll and get to top button */}

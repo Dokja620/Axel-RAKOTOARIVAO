@@ -1,27 +1,53 @@
-import { component$ } from '@builder.io/qwik';
+import { component$, $ } from '@builder.io/qwik';
 
-// Fourth section | website I made
+interface Slide {
+  className: string;
+  title: string;
+  description: string;
+}
 
 export default component$(() => {
-    return (
-        <section id="website">
-            <div class="slider">
-                <div class="slides malala">
-                    <div class="content"></div>
-                </div>
-                <div class="slides vacances">
-                    <div class="content"></div>
-                </div>
-                <div class="slides batman">
-                    <div class="content"></div>
-                </div>
-                <div class="slides panther">
-                    <div class="content"></div>
-                </div>
-                <div class="slides superman">
-                    <div class="content"></div>
-                </div>
+  const slides: Slide[] = [
+    { className: 'malala', title: 'Malala Evasion', description: 'Advocate for girls\' education and the youngest Nobel Prize laureate.' },
+    { className: 'vacances', title: 'Vacances Nosy Be Tour', description: 'Enjoying the holiday season on a sunny beach.' },
+    { className: 'batman', title: 'Batman', description: 'The Dark Knight of Gotham City.' },
+    { className: 'panther', title: 'Black Panther', description: 'King of Wakanda and a member of the Avengers.' },
+    { className: 'superman', title: 'Superman', description: 'The Man of Steel from Krypton.' },
+  ];
+
+  const handlePrevClick = $(() => {
+    const slider = document.querySelector('.slider');
+    if (slider) {
+      const slides = document.querySelectorAll('.slides');
+      slider.prepend(slides[slides.length - 1]);
+    }
+  });
+
+  const handleNextClick = $(() => {
+    const slider = document.querySelector('.slider');
+    if (slider) {
+      const slides = document.querySelectorAll('.slides');
+      slider.appendChild(slides[0]);
+    }
+  });
+
+
+  return (
+    <section id="website">
+      <div class="slider">
+        {slides.map((slide, index) => (
+          <div key={index} class={`slides ${slide.className}`}>
+            <div class="slide-description">
+              <h2>{slide.title}</h2>
+              <p>{slide.description}</p>
             </div>
-        </section>
-    );
+          </div>
+        ))}
+      </div>
+      <div class="slider-buttons">
+        <span class="prev" onclick$={handlePrevClick}></span>
+        <span class="next" onclick$={handleNextClick}></span>
+      </div>
+    </section>
+  );
 });
