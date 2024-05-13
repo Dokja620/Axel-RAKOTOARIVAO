@@ -5,11 +5,22 @@ import { component$ } from '@builder.io/qwik';
 export default component$(() => {
     return (
         <section id="website">
-            <div class="utilities">
-                <div class="tools qwik-animate"></div>
-                <div class="tools qwik-loader"></div>
-                <div class="tools qwik-loader"></div>
-                <div class="tools css-navbar"></div>
+            <div class="slider">
+                <div class="slides malala">
+                    <div class="content"></div>
+                </div>
+                <div class="slides vacances">
+                    <div class="content"></div>
+                </div>
+                <div class="slides batman">
+                    <div class="content"></div>
+                </div>
+                <div class="slides panther">
+                    <div class="content"></div>
+                </div>
+                <div class="slides superman">
+                    <div class="content"></div>
+                </div>
             </div>
         </section>
     );

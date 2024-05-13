@@ -1,16 +1,9 @@
 /* Default styles */
 :root {
     /* CSS HSL */
-    --true-blue: hsla(210, 96%, 40%, 1);
-    --sapphire: hsla(210, 96%, 33%, 1);
-    --yale-blue: hsla(211, 97%, 25%, 1);
-    --oxford-blue: hsla(212, 100%, 17%, 1);
-    --oxford-blue-2: hsla(219, 100%, 14%, 1);
-    --oxford-blue-3: hsla(219, 100%, 10%, 1);
-    --delft-blue: hsla(220, 29%, 28%, 1);
-    --paynes-gray: hsla(220, 15%, 43%, 1);
-    --slate-gray: hsla(222, 11%, 54%, 1);
-    --cool-gray: hsla(223, 11%, 63%, 1);
+    --lavender-web: hsla(248, 54%, 89%, 1);
+    --mint-cream: hsla(111, 24%, 94%, 1);
+    --dark-black: hsl(210, 50%, 1%);
 }
 
 * {
@@ -20,7 +13,7 @@
     list-style: none;
     text-decoration: none;
     font-weight: normal;
-    color: white;
+    color: var(--mint-cream);
 }
 
 body {
@@ -30,24 +23,24 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto;
     background-color:hsla(220,100%,22%,1);
-background-image:
-radial-gradient(at 49% 40%, hsla(253,100%,47%,1) 0px, transparent 50%),
-radial-gradient(at 96% 41%, hsla(250,100%,38%,1) 0px, transparent 50%),
-radial-gradient(at 72% 97%, hsla(253,100%,49%,0.9) 0px, transparent 50%),
-radial-gradient(at 86% 9%, hsla(253,70%,45%,1) 0px, transparent 50%),
-radial-gradient(at 12% 48%, hsla(300,62%,20%,0.38) 0px, transparent 50%),
-radial-gradient(at 89% 70%, hsla(224,92%,46%,1) 0px, transparent 50%);
+    background-image:
+    radial-gradient(at 49% 40%, hsla(253,100%,47%,1) 0px, transparent 50%),
+    radial-gradient(at 96% 41%, hsla(250,100%,38%,1) 0px, transparent 50%),
+    radial-gradient(at 72% 97%, hsla(253,100%,49%,0.9) 0px, transparent 50%),
+    radial-gradient(at 86% 9%, hsla(253,70%,45%,1) 0px, transparent 50%),
+    radial-gradient(at 12% 48%, hsla(300,62%,20%,0.38) 0px, transparent 50%),
+    radial-gradient(at 89% 70%, hsla(224,92%,46%,1) 0px, transparent 50%);
     &::-webkit-scrollbar {
         width: .45em;
     }
 
     &::-webkit-scrollbar-track {
-        background: color-mix(in srgb, var(--cool-gray), transparent 60%);
+        background: color-mix(in srgb, var(--mint-cream), transparent 60%);
         border-left: 1px solid hsla(111, 24%, 94%, .1);
     }
     
     &::-webkit-scrollbar-thumb {
-        background: color-mix(in srgb, var(--oxford-blue), transparent 25%);
+        background: color-mix(in srgb, var(--mint-cream), transparent 25%);
     }
 }
 
@@ -59,6 +52,7 @@ radial-gradient(at 89% 70%, hsla(224,92%,46%,1) 0px, transparent 50%);
 
 // Page sections
 @import './home/intro';
+@import './home/website';
 
 .background{
     position: absolute;
@@ -87,18 +81,61 @@ section {
     min-height: 100vh;
 }
 
-#intro{
-    // background: black;
+// Fixed scroll/get to top
+.fixed{
+    position: fixed;
+    bottom: $spacing-lg;
+    left: $spacing-lg;
+    width: fit-content;
+    height: fit-content;
 }
-#skill{
-    // background: blue;
+
+.scroll-top{
+    width: 25px;
+    aspect-ratio: 1/1.5;
+    border-radius: $spacing;
+    outline: 2px solid color-mix(in srgb, var(--mint-cream), transparent 50%);
+    box-shadow: 0px 0px 10px var(--mint-cream);
+    position: relative;
+    cursor: pointer;
+    &:hover::before{
+        transform: translateY(-50%) scaleX(1);
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-40%, -50%);
+        height: 10px;
+        width: 5px;
+        border-radius: 2px;
+        background: var(--mint-cream);
+        box-shadow: 0px 0px 10px var(--mint-cream);
+        animation: scroll 1s linear infinite;;
+    }
+    &::before{
+        content: 'scroll pour en voir plus';
+        position: absolute;
+        width: max-content;
+        font-weight: 200;
+        left: 35px;
+        top: 50%;
+        transform: translateY(-50%) scaleX(0);
+        transform-origin: left;
+        transition: transform .15s ease-in-out;
+    }
 }
-#portfolio{
-    // background: yellow;
-}
-#website{
-    // background: green;
-}
-#get-in-touch{
-    // background: magenta;
+
+@keyframes scroll {
+    0% {
+        transform: translate(-50%, -50%);
+    }
+    
+    50% {
+        transform: translate(-50%, -30%);
+    }
+    100%{
+        transform: translate(-50%, -50%);
+    }
 }

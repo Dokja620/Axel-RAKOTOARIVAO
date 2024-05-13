@@ -13,6 +13,10 @@ export default component$(() => (
         <Portfolio/>
         <Website/>
         <Form/>
+        {/* scroll and get to top button */}
+        <div class="fixed">
+            <div class="scroll-top"></div>
+        </div>
     </>
 ));
 

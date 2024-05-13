@@ -1,8 +1,60 @@
-#intro{
+#intro {
     min-height: 100vh;
-    display: grid;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-.bio{
-    max-width: 600px;
+
+.bio {
+    display: flex;
+
+    .info {
+        max-width: 600px;
+    }
+
+    .me {
+        rotate: -45deg;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.get-in-touch{
+    margin: $spacing-xl 0 0;
+    button{
+        background: none;
+        border: 2px dotted var(--mint-cream);
+        padding: $spacing-xs $spacing-lg;
+        border-radius: $spacing-lg;
+        text-transform: uppercase;
+        font-weight: 800;
+        letter-spacing: 2px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        &:hover::before{
+            transform: translate(0%, -50%);
+        }
+        &::before{
+            content: '';
+            height: 200%;
+            width: 100%;
+            border-radius: $spacing-xxl;
+            position: absolute;
+            top: 50%;
+            transform: translate(-100%, -50%);
+            left: 0;
+            background: var(--mint-cream);
+            z-index: -1;
+            transition: transform .5s ease-in-out, border .15s ease-in-out .5s, color .25s ease-in-out .25s;
+        }
+        &:hover{
+            color: hsla(224,92%,46%,1);
+            border: 2px solid var(--mint-cream);
+            box-shadow: 0px 0px 2px inset var(--mint-cream);
+        }
+    }
 }

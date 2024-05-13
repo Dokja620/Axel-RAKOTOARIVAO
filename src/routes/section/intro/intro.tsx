@@ -1,5 +1,5 @@
 import { component$ } from '@builder.io/qwik';
-
+// import axel from '/media/moi/axel-001.png';
 // First section | Introducing Axel
 
 export default component$(() => {
@@ -7,7 +7,7 @@ export default component$(() => {
         <section id="intro" class="container">
             <div class="bio">
                 <div class="info">
-                    <h1>Hi Je suis</h1>
+                    <h1>Hey🙂 ! Je suis</h1>
                     <h1>Axel RAKOTOARIVAO</h1>
                     <h1>Développeur Front-End</h1>
                     <p>
@@ -20,11 +20,12 @@ export default component$(() => {
                     </p>
                 </div>
                 <div class="me">
-                    
+                    {/* <img src={axel} alt="" width={2592} height={1456}/> */}
                 </div>
             </div>
-            <div class="get-in-touch">
 
+            <div class="get-in-touch">
+                <button>Me contacter</button>
             </div>
             {/* // rectangles background */}
             <div class="background">
