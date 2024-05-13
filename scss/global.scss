@@ -20,7 +20,7 @@
     list-style: none;
     text-decoration: none;
     font-weight: normal;
-    color: var(--mint-cream);
+    color: white;
 }
 
 body {
@@ -29,18 +29,25 @@ body {
     overflow-x: hidden;
     display: grid;
     grid-template-rows: auto 1fr auto;
-    background: #15161A;
+    background-color:hsla(220,100%,22%,1);
+background-image:
+radial-gradient(at 49% 40%, hsla(253,100%,47%,1) 0px, transparent 50%),
+radial-gradient(at 96% 41%, hsla(250,100%,38%,1) 0px, transparent 50%),
+radial-gradient(at 72% 97%, hsla(253,100%,49%,0.9) 0px, transparent 50%),
+radial-gradient(at 86% 9%, hsla(253,70%,45%,1) 0px, transparent 50%),
+radial-gradient(at 12% 48%, hsla(300,62%,20%,0.38) 0px, transparent 50%),
+radial-gradient(at 89% 70%, hsla(224,92%,46%,1) 0px, transparent 50%);
     &::-webkit-scrollbar {
-        width: .35em;
+        width: .45em;
     }
 
     &::-webkit-scrollbar-track {
-        background: red;
+        background: color-mix(in srgb, var(--cool-gray), transparent 60%);
         border-left: 1px solid hsla(111, 24%, 94%, .1);
     }
-
+    
     &::-webkit-scrollbar-thumb {
-        background: blue;
+        background: color-mix(in srgb, var(--oxford-blue), transparent 25%);
     }
 }
 
@@ -48,6 +55,10 @@ body {
 @import './shared/var';
 @import './components/navbar';
 @import './components/footer';
+@import './responsive';
+
+// Page sections
+@import './home/intro';
 
 .background{
     position: absolute;

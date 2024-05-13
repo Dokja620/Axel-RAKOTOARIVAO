@@ -1,0 +1,15 @@
+header{
+    padding: $spacing
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    background: var(--delft-blue);
+    padding: $spacing-xs $spacing-md;
+    border-radius: $spacing-lg;
+}
+
+.nav-links ul{
+    display: flex;
+    gap: $spacing;
+}

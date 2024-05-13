@@ -12,6 +12,9 @@ export default component$(() => {
 
             <div class="get-to-top" onClick$={scrollToTop}>
             </div>
+            <div class="copyright">
+                
+            </div>
         </footer>
     );
 });

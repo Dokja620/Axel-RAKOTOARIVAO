@@ -1,5 +1,7 @@
 /* Default styles */
 
+@import url("https://fonts.googleapis.com/css?family=Inter:700|Inter:400");
+
 :root {
   /* CSS HSL */
   --true-blue: hsla(210, 96%, 40%, 1);
@@ -21,7 +23,7 @@
   list-style: none;
   text-decoration: none;
   font-weight: normal;
-  color: var(--mint-cream);
+  color: white;
 }
 
 body {
@@ -30,20 +32,117 @@ body {
   overflow-x: hidden;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  background: #15161A;
+  background-color: hsl(220, 100%, 22%);
+  background-image: radial-gradient(at 49% 40%, hsl(253, 100%, 47%) 0px, transparent 50%), radial-gradient(at 96% 41%, hsl(250, 100%, 38%) 0px, transparent 50%), radial-gradient(at 72% 97%, hsla(253, 100%, 49%, 0.9) 0px, transparent 50%), radial-gradient(at 86% 9%, hsl(253, 70%, 45%) 0px, transparent 50%), radial-gradient(at 12% 48%, hsla(300, 62%, 20%, 0.38) 0px, transparent 50%), radial-gradient(at 89% 70%, hsl(224, 92%, 46%) 0px, transparent 50%);
 }
 
 body::-webkit-scrollbar {
-  width: 0.35em;
+  width: 0.45em;
 }
 
 body::-webkit-scrollbar-track {
-  background: red;
+  background: color-mix(in srgb, var(--cool-gray), transparent 60%);
   border-left: 1px solid hsla(111, 24%, 94%, 0.1);
 }
 
 body::-webkit-scrollbar-thumb {
-  background: blue;
+  background: color-mix(in srgb, var(--oxford-blue), transparent 25%);
+}
+
+body {
+  font-family: "Inter";
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Inter";
+  font-weight: 700;
+}
+
+html {
+  font-size: 100%;
+}
+
+/* 16px */
+
+h1 {
+  font-size: 3.053rem;
+  /* 48.8px */
+}
+
+h2 {
+  font-size: 2.442rem;
+  /* 39.04px */
+}
+
+h3 {
+  font-size: 1.954rem;
+  /* 31.2px */
+}
+
+h4 {
+  font-size: 1.563rem;
+  /* 24.96px */
+}
+
+h5 {
+  font-size: 1.25rem;
+  /* 20px */
+}
+
+small {
+  font-size: 0.8rem;
+  /* 12.8px */
+}
+
+header {
+  padding: 1em;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background: var(--delft-blue);
+  padding: 0.6666666667em 1.5em;
+  border-radius: 1.75em;
+}
+
+.nav-links ul {
+  display: flex;
+  gap: 1em;
+}
+
+/*Desktop First*/
+
+.container {
+  max-width: 1536px;
+  margin: 0 auto;
+}
+
+/*2xl*/
+
+/*xl*/
+
+/*lg*/
+
+/*md*/
+
+/*sm*/
+
+/*xs*/
+
+#intro {
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+}
+
+.bio {
+  max-width: 600px;
 }
 
 .background {
@@ -73,5 +172,47 @@ main {
 
 section {
   min-height: 100vh;
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (max-width: 1536px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    max-width: 475px;
+  }
+}
+
+@media (max-width: 475px) {
+  .container {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=global.css.map */
