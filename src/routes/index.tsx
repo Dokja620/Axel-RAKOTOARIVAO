@@ -7,19 +7,41 @@ export default component$(() => (
         <section id="intro">
             <div class="bio">
                 <div class="info">
-                    <h1>Je suis <span class="secondary" >Axel RAKOTOARIVAO</span></h1>
+                    {/* <small>Bienvenue sur mon portefolio</small>
+                    <h1>Hi Je suis</h1>
+                    <h1>Axel RAKOTOARIVAO</h1>
+                    <h1>Développeur Front-End</h1>
                     <p>
-                        Développeur Front-End
                         Spécialisé dans la conception de sites web captivants, 
                         utilisant React JS, Qwik et Alpine.js. Mon objectif 
                         principal est de créer des expériences utilisateur 
                         fluides et des interfaces intuitives. Chaque projet 
                         que je réalise vise à élever les normes d'engagement 
                         et de qualité.
-                    </p>
+                    </p> */}
                 </div>
                 <div class="me">
-
+                    <div class="background">
+                        <div class="frame-box">
+                            <div class="frame"></div>
+                        </div>
+                        <div class="frame-box">
+                            <div class="frame"></div>
+                            <div class="frame"></div>
+                        </div>
+                        <div class="frame-box">
+                            <div class="frame"></div>
+                            <div class="frame"></div>
+                            <div class="frame"></div>
+                        </div>
+                        <div class="frame-box">
+                            <div class="frame"></div>
+                            <div class="frame"></div>
+                        </div>
+                        <div class="frame-box">
+                            <div class="frame"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="get-in-touch">
@@ -72,11 +94,11 @@ export default component$(() => (
 ));
 
 export const head: DocumentHead = {
-    title: "Ohayo Dev & Design - Acceuil",
+    title: "Axel RAKOTOARIVAO | Dévelopeur Front-End",
     meta: [
         {
             name: "description",
-            content: "Homepage ohayo dev & design",
+            content: "Moi c'est Axel RAKOTOARIVAO, un développeur Front-End spécialisé dans la conception de sites web captivants utilisant React JS, Qwik et Alpine.js. Mon objectif principal est de créer des expériences utilisateur fluides et des interfaces intuitives, visant toujours à élever les normes d'engagement et de qualité.",
         },
     ],
 };

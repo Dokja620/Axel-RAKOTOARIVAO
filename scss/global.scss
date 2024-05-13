@@ -1,10 +1,16 @@
 /* Default styles */
 :root {
-    --yale-blue: hsla(212, 72%, 26%, 1);
-    --berkeley-blue: hsla(215, 66%, 22%, 1);
-    --oxford-blue: hsla(213, 72%, 16%, 1);
-    --powder-blue: hsla(209, 32%, 66%, 1);
-    --mint-cream: hsla(111, 24%, 94%, 1);
+    /* CSS HSL */
+    --true-blue: hsla(210, 96%, 40%, 1);
+    --sapphire: hsla(210, 96%, 33%, 1);
+    --yale-blue: hsla(211, 97%, 25%, 1);
+    --oxford-blue: hsla(212, 100%, 17%, 1);
+    --oxford-blue-2: hsla(219, 100%, 14%, 1);
+    --oxford-blue-3: hsla(219, 100%, 10%, 1);
+    --delft-blue: hsla(220, 29%, 28%, 1);
+    --paynes-gray: hsla(220, 15%, 43%, 1);
+    --slate-gray: hsla(222, 11%, 54%, 1);
+    --cool-gray: hsla(223, 11%, 63%, 1);
 }
 
 * {
@@ -19,19 +25,69 @@
 
 body {
     min-height: 100dvh;
+    max-width: 100vw;
+    overflow-x: hidden;
     display: grid;
     grid-template-rows: auto 1fr auto;
-}
+    background: #15161A;
+    &::-webkit-scrollbar {
+        width: .35em;
+    }
 
-main {
-    overflow: hidden;
-}
+    &::-webkit-scrollbar-track {
+        background: red;
+        border-left: 1px solid hsla(111, 24%, 94%, .1);
+    }
 
-section {
-    min-height: 100vh;
+    &::-webkit-scrollbar-thumb {
+        background: blue;
+    }
 }
 
 @import './shared/typo';
 @import './shared/var';
 @import './components/navbar';
 @import './components/footer';
+
+.background{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: rotate(-30deg) translate(25%, 15%);
+    z-index: -1;
+}
+
+.frame-box{
+    display: flex;
+    justify-content: center;
+}
+.frame{
+    width: 250px;
+    aspect-ratio: 2/1;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: $spacing;
+    margin: $spacing-xs;
+}
+
+main {
+    overflow: hidden;
+}
+section {
+    min-height: 100vh;
+}
+
+#intro{
+    // background: black;
+}
+#skill{
+    // background: blue;
+}
+#portfolio{
+    // background: yellow;
+}
+#website{
+    // background: green;
+}
+#get-in-touch{
+    // background: magenta;
+}
