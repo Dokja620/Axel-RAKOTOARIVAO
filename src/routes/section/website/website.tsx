@@ -8,11 +8,11 @@ interface Slide {
 
 export default component$(() => {
   const slides: Slide[] = [
+    { className: 'superman', title: 'Superman', description: 'The Man of Steel from Krypton.' },
     { className: 'malala', title: 'Malala Evasion', description: 'Advocate for girls\' education and the youngest Nobel Prize laureate.' },
     { className: 'vacances', title: 'Vacances Nosy Be Tour', description: 'Enjoying the holiday season on a sunny beach.' },
     { className: 'batman', title: 'Batman', description: 'The Dark Knight of Gotham City.' },
-    { className: 'panther', title: 'Black Panther', description: 'King of Wakanda and a member of the Avengers.' },
-    { className: 'superman', title: 'Superman', description: 'The Man of Steel from Krypton.' },
+    { className: 'panther', title: 'Black Panther', description: 'King of Wakanda and a member of the Avengers.' }
   ];
 
   const handlePrevClick = $(() => {
