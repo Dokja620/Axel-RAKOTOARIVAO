@@ -12,7 +12,7 @@ export default component$(() => (
         <Skill/>
         {/* <Portfolio/> */}
         
-        <h2 class="web-creation container">Mes créations digitales dans le domaine du web 🎨</h2>
+        <h2 class="web-creation container">Mes créations digitales dans le domaine du web 🤗</h2>
         <Website/>
         <Form/>
         {/* scroll and get to top button */}

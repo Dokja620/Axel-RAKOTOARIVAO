@@ -9,7 +9,21 @@
         align-items: center;
         flex-wrap: wrap;
         gap: $spacing-xxl;
-        margin: $spacing-xxl 0 10%;
+        margin: $spacing 0 calc($spacing-xxl * 2);
+        li{
+            position: relative;
+        }
+        :nth-child(4)::after, :nth-child(7)::after{
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -25px;
+            transform: translateY(-50%);
+            height: 60px;
+            width: 4px;
+            border-radius: 2px;
+            background: rgba(255, 255, 255, 0.2);
+        }
     }
 }
 
@@ -23,13 +37,13 @@
         text-align: center;
     }
     .list{
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 375px);
         justify-content: center;
-        flex-wrap: wrap;
-        gap: $spacing;
+        gap: $spacing-md;
         margin: $spacing-2xl 0 0;
         div{
-            width: 300px;
+            min-width: 300px;
             background: rgba(255, 255, 255, 0.2);
             border-radius: $spacing;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);

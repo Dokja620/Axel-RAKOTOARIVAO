@@ -1,3 +1,4 @@
+// TODO it bugs, few lags when switching
 .web-creation{
     text-align: center;
 }
@@ -48,18 +49,21 @@
         background: url('/public/media/bg-proj/bat.webp') center;
         > .slide-description{
             background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
     }
     &.panther{
         background: url('/public/media/bg-proj/pant.webp') center;
         > .slide-description{
             background: hsla(224,92%,46%, .3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
     }
     &.superman{
         background: url('/public/media/bg-proj/sup.webp') center;
         > .slide-description{
             background: hsla(0, 100%, 29%, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
     }
 
@@ -112,7 +116,7 @@
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        border: 2px dotted var(--mint-cream);
+        border: 2px solid var(--mint-cream);
         cursor: pointer;
         overflow: hidden;
         transition: transform .25s ease-in-out;
@@ -155,7 +159,7 @@
     }
 }
 .slide-links{
-    margin: $spacing 0 0;
+    margin: $spacing-lg 0 0;
     display: flex;
     gap: 6px;
     > :nth-child(1){
@@ -164,7 +168,7 @@
     }
     :nth-child(2){
         border-radius: 8px $spacing-lg $spacing-lg 8px;
-        padding: 4px 14px 4px 12px;
+        padding: 4px 8px 4px 12px;
         span{
             position: relative;
             top: 1px;
@@ -176,7 +180,7 @@
     a{
         border: 2px solid white;
         font-size: 1rem;
-        box-shadow: 0px 4px 25px var(--dark-black);
+        box-shadow: 0px 4px 12px color-mix(in srgb, var(--dark-black), transparent 50%);
     }
     .p{
         text-transform: uppercase;

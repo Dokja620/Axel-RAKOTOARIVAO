@@ -16,6 +16,7 @@ import bun from '/media/techs/logos--bun.svg';
 import gulp from '/media/techs/logos--gulp.svg';
 import postcss from '/media/techs/logos--postcss.svg';
 import sass from '/media/techs/logos--sass.svg';
+import git from '/media/techs/logos--git.svg';
 
 // Second section | What do I do ?
 
@@ -26,13 +27,14 @@ export default component$(() => {
                 <h2>Les technologies que j'utilise 🚀</h2>
                 <ul>
                     <li><span><img src={html} title='html5' alt="icon html5" width={65} height={65}/></span></li>
-                    <li><span><img src={css} title='css3' alt="icon css3" width={70} height={70}/></span></li>
-                    <li><span><img src={javascript} title='javascript' alt="icon javascript" width={65} height={65}/></span></li>
+                    <li><span><img src={css} title='css3' alt="icon css3" width={72} height={72}/></span></li>
+                    <li><span><img src={javascript} title='javascript' alt="icon javascript" width={60} height={60}/></span></li>
                     <li><span><img src={sass} title='sass' alt="icon sass" width={65} height={65}/></span></li>
-                    <li><span><img src={qwik} title='qwik js' alt="icon qwik" width={65} height={65}/></span></li>
+                    <li><span><img src={qwik} title='qwik js' alt="icon qwik" width={62} height={62}/></span></li>
                     <li><span><img src={react} title='react js' alt="icon react" width={65} height={65}/></span></li>
-                    <li><span><img src={alpine} title='alpine js' alt="icon alpine" width={65} height={65}/></span></li>
+                    <li><span><img src={alpine} title='alpine js' alt="icon alpine" width={100} height={100}/></span></li>
                     <li><span><img src={bun} title='bun' alt="icon bun" width={65} height={65}/></span></li>
+                    <li><span><img src={git} title='git' alt="icon git" width={65} height={65}/></span></li>
                     <li><span><img src={gulp} title='gulp' alt="icon gulp" width={65} height={65}/></span></li>
                     <li><span><img src={postcss} title='postcss' alt="icon postcss" width={65} height={65}/></span></li>
                 </ul>
@@ -58,9 +60,23 @@ export default component$(() => {
                     <div>
                         <h4>
                             <span><img src={users} alt="users icon" width={30} height={30}/></span>
-                            Expérience Utilisateur
+                            Expérience User
                         </h4>
                         <p>Je focalise sur la facilité d'utilisation et l'engagement de l'utilisateur pour améliorer l'interaction avec le produit.</p>
+                    </div>
+                    <div>
+                        <h4>
+                            <span><img src={bolt} alt="bolt icon" width={30} height={30}/></span>
+                            Performance Optimal
+                        </h4>
+                        <p>Je travaille à optimiser la performance des applications pour des chargements rapides et une réactivité élevée.</p>
+                    </div>
+                    <div>
+                        <h4>
+                            <span><img src={bolt} alt="bolt icon" width={30} height={30}/></span>
+                            Performance Optimal
+                        </h4>
+                        <p>Je travaille à optimiser la performance des applications pour des chargements rapides et une réactivité élevée.</p>
                     </div>
                     <div>
                         <h4>
