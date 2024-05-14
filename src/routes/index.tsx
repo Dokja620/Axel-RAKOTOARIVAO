@@ -2,18 +2,17 @@ import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import Intro from "./section/intro/intro";
 import Skill from "./section/skill/skill";
-import Portfolio from "./section/portfolio/portfolio";
 import Website from "./section/website/website";
 import Form from "./section/form/form";
+import Project from "./section/project/project";
 
 export default component$(() => (
     <>
         <Intro/>
         <Skill/>
-        {/* <Portfolio/> */}
-        
         <h2 class="web-creation container">Mes créations digitales dans le domaine du web 🤗</h2>
         <Website/>
+        <Project/>
         <Form/>
         {/* scroll and get to top button */}
         <div class="fixed">

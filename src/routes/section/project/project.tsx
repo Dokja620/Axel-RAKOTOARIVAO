@@ -4,7 +4,7 @@ import { component$ } from '@builder.io/qwik';
 
 export default component$(() => {
     return (
-        <section id="portfolio">
+        <section id="project">
             <div class="utilities">
                 <div class="tools qwik-animate"></div>
                 <div class="tools qwik-loader"></div>

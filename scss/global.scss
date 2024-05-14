@@ -58,6 +58,7 @@ body {
 // Page sections
 @import './home/intro';
 @import './home/skill';
+@import './home/project';
 @import './home/website';
 @import './home/form';
 
@@ -85,7 +86,7 @@ main {
     overflow: hidden;
 }
 section {
-    min-height: 100vh;
+    height: 100vh;
 }
 
 // Fixed scroll/get to top

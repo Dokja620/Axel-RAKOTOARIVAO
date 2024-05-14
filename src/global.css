@@ -298,6 +298,13 @@ footer {
   opacity: 0;
 }
 
+#project {
+  height: 50vh;
+  margin: 3em 0;
+  border-top: 1px solid var(--celestial-blue);
+  border-bottom: 1px solid var(--celestial-blue);
+}
+
 .web-creation {
   text-align: center;
 }
@@ -635,7 +642,7 @@ main {
 }
 
 section {
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .fixed {
