@@ -1,0 +1,31 @@
+.do{
+    h2{
+        text-align: center;
+    }
+    > p{
+        text-align: center;
+    }
+    .list{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: $spacing;
+        margin: $spacing-2xl 0 0;
+        div{
+            width: 300px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: $spacing;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: $spacing;
+        }
+        h4{
+            position: relative;
+            span{
+                position: absolute;
+                opacity: 0;
+            }
+        }
+    }
+}

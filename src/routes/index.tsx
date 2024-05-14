@@ -9,7 +9,7 @@ import Form from "./section/form/form";
 export default component$(() => (
     <>
         <Intro/>
-        {/* <Skill/> */}
+        <Skill/>
         {/* <Portfolio/> */}
         <Website/>
         <Form/>

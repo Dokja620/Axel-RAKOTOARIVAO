@@ -14,4 +14,8 @@ footer{
         align-items: center;
         margin: 0 0 $spacing;
     }
+    span{
+        position: relative;
+        top: 2px;
+    }
 }
