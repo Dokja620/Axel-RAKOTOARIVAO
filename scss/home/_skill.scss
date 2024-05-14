@@ -1,8 +1,25 @@
+// Tech stack
+.tech{
+    h2{
+        text-align: center;
+    }
+    ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: $spacing-xxl;
+        margin: $spacing-xxl 0 10%;
+    }
+}
+
+// What I Do 👀
 .do{
     h2{
         text-align: center;
     }
     > p{
+        margin: $spacing 0 0;
         text-align: center;
     }
     .list{

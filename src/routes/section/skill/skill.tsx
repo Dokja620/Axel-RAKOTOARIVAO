@@ -5,6 +5,18 @@ import bolt from '/media/bolt.svg';
 import responsive from '/media/responsive.svg';
 import users from '/media/users.svg';
 
+// tech stack
+import html from '/media/techs/devicon--html5.svg';
+import css from '/media/techs/logos--css3.svg';
+import javascript from '/media/techs/logos--javascript.svg';
+import qwik from '/media/techs/logos--qwik.svg';
+import react from '/media/techs/logos--react.svg';
+import alpine from '/media/techs/logos--alpinejs.svg';
+import bun from '/media/techs/logos--bun.svg';
+import gulp from '/media/techs/logos--gulp.svg';
+import postcss from '/media/techs/logos--postcss.svg';
+import sass from '/media/techs/logos--sass.svg';
+
 // Second section | What do I do ?
 
 export default component$(() => {
@@ -13,7 +25,16 @@ export default component$(() => {
             <div class="tech">
                 <h2>Les technologies que j'utilise 🚀</h2>
                 <ul>
-                    <li><span></span></li>
+                    <li><span><img src={html} title='html5' alt="icon html5" width={65} height={65}/></span></li>
+                    <li><span><img src={css} title='css3' alt="icon css3" width={70} height={70}/></span></li>
+                    <li><span><img src={javascript} title='javascript' alt="icon javascript" width={65} height={65}/></span></li>
+                    <li><span><img src={sass} title='sass' alt="icon sass" width={65} height={65}/></span></li>
+                    <li><span><img src={qwik} title='qwik js' alt="icon qwik" width={65} height={65}/></span></li>
+                    <li><span><img src={react} title='react js' alt="icon react" width={65} height={65}/></span></li>
+                    <li><span><img src={alpine} title='alpine js' alt="icon alpine" width={65} height={65}/></span></li>
+                    <li><span><img src={bun} title='bun' alt="icon bun" width={65} height={65}/></span></li>
+                    <li><span><img src={gulp} title='gulp' alt="icon gulp" width={65} height={65}/></span></li>
+                    <li><span><img src={postcss} title='postcss' alt="icon postcss" width={65} height={65}/></span></li>
                 </ul>
             </div>
             <div class="do">
@@ -50,12 +71,6 @@ export default component$(() => {
                     </div>
                 </div>
             </div>
-            {/* <div class="utilities">
-                <div class="tools qwik-animate">Animation Libraries (Framer Motion) - Tools for adding motion to UI elements.</div>
-                <div class="tools qwik-loader">Module Bundlers (Webpack, Vite) - Optimizing resources and improving load times.</div>
-                <div class="tools qwik-loader">State Management (Redux, Context API) - Managing and centralizing application state.</div>
-                <div class="tools css-navbar">CSS Frameworks (Tailwind, Bootstrap) - Providing ready-to-use components for faster UI development.</div>
-            </div> */}
         </section>
     );
 });

@@ -7,6 +7,11 @@
   --lavender-web: hsla(248, 54%, 89%, 1);
   --mint-cream: hsla(111, 24%, 94%, 1);
   --dark-black: hsl(210, 50%, 1%);
+  --palatinate-blue: hsla(224, 92%, 46%, 1);
+  --celestial-blue: hsla(202, 78%, 49%, 1);
+  --licorice: hsla(283, 16%, 8%, 1);
+  --turquoise: hsla(166, 70%, 68%, 1);
+  --lavender-blush: hsla(4, 100%, 97%, 1);
 }
 
 * {
@@ -221,9 +226,22 @@ footer {
 }
 
 .get-in-touch button:hover {
-  color: hsl(224, 92%, 46%);
+  color: var(--palatinate-blue);
   border: 2px solid var(--mint-cream);
   box-shadow: 0px 0px 2px inset var(--mint-cream);
+}
+
+.tech h2 {
+  text-align: center;
+}
+
+.tech ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3em;
+  margin: 3em 0 10%;
 }
 
 .do h2 {
@@ -231,6 +249,7 @@ footer {
 }
 
 .do > p {
+  margin: 1em 0 0;
   text-align: center;
 }
 
@@ -260,6 +279,10 @@ footer {
 .do .list h4 span {
   position: absolute;
   opacity: 0;
+}
+
+.web-creation {
+  text-align: center;
 }
 
 #website {
@@ -299,20 +322,40 @@ footer {
   background: url("/public/media/bg-proj/malala.webp") center;
 }
 
+.slides.malala > .slide-description {
+  background: hsla(162, 94%, 31%, 0.2);
+}
+
 .slides.vacances {
   background: url("/public/media/bg-proj/tour.webp") center;
+}
+
+.slides.vacances > .slide-description {
+  background: hsla(32, 6%, 45%, 0.452);
 }
 
 .slides.batman {
   background: url("/public/media/bg-proj/bat.webp") center;
 }
 
+.slides.batman > .slide-description {
+  background: rgba(0, 0, 0, 0.3);
+}
+
 .slides.panther {
   background: url("/public/media/bg-proj/pant.webp") center;
 }
 
+.slides.panther > .slide-description {
+  background: hsla(224, 92%, 46%, 0.3);
+}
+
 .slides.superman {
   background: url("/public/media/bg-proj/sup.webp") center;
+}
+
+.slides.superman > .slide-description {
+  background: hsla(0, 100%, 29%, 0.2);
 }
 
 .slides:nth-child(1),
@@ -323,7 +366,7 @@ footer {
   width: 100%;
   height: 100%;
   background-size: cover;
-  box-shadow: 0 25px 50px hsla(0, 0%, 0%, 0.555);
+  box-shadow: 0 25px 50px color-mix(in srgb, var(--dark-black), transparent 50%);
 }
 
 .slides:nth-child(1) .slide-description,
@@ -331,6 +374,16 @@ footer {
   opacity: 1;
   transform: translateY(0);
   transition-delay: 0.5s;
+}
+
+.slides:nth-child(1) .slide-description h2,
+.slides:nth-child(2) .slide-description h2 {
+  text-shadow: 0px 2px 4px color-mix(in srgb, var(--dark-black), transparent 50%), 0px 2px 16px color-mix(in srgb, var(--dark-black), transparent 50%);
+}
+
+.slides:nth-child(1) .slide-description p,
+.slides:nth-child(2) .slide-description p {
+  text-shadow: 0px 2px 8px var(--dark-black), 0px 2px 16px var(--dark-black), 0px 2px 20px var(--dark-black);
 }
 
 .slides:nth-child(1) {
@@ -398,77 +451,142 @@ footer {
   transition-delay: 0;
   opacity: 0;
   transform: translateY(40px);
+  background: hsla(224, 92%, 46%, 0.3);
+  border-radius: 0 1.75em 0 1em;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1em;
+}
+
+.slide-links {
+  margin: 1em 0 0;
+  display: flex;
+  gap: 6px;
+}
+
+.slide-links > :nth-child(1) {
+  border-radius: 1.75em 8px 8px 1.75em;
+  padding: 8px 1em 8px 1.75em;
+}
+
+.slide-links :nth-child(2) {
+  border-radius: 8px 1.75em 1.75em 8px;
+  padding: 4px 14px 4px 12px;
+}
+
+.slide-links :nth-child(2) span {
+  position: relative;
+  top: 1px;
+}
+
+.slide-links :nth-child(2) img {
+  scale: 1.1;
+}
+
+.slide-links a {
+  border: 2px solid white;
+  font-size: 1rem;
+  box-shadow: 0px 4px 25px var(--dark-black);
+}
+
+.slide-links .p {
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 #form {
-  height: -moz-fit-content;
-  height: fit-content;
-  margin: 15% 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#form h2 {
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto;
+#form > div {
+  width: 50%;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  gap: 3em;
+  flex-grow: 1;
+}
+
+.contact .details > div {
+  margin: 2em 0;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.contact .details > div span {
+  position: relative;
+  top: 2px;
+}
+
+.contact .social-media {
+  display: flex;
+  gap: 3em;
 }
 
 form {
-  width: clamp(300px, 75%, 800px);
-  margin: 0 auto;
+  width: 100%;
+  background-color: white;
+  border-radius: 1.5em;
+  padding: 1.75em;
+  display: grid;
+  gap: 1.5em;
+}
+
+form label {
+  color: var(--palatinate-blue);
+}
+
+form > div {
   display: flex;
   flex-direction: column;
 }
 
-form input {
+form input,
+form textarea {
   background: none;
-  padding: 1em;
-  border-radius: 1.75em;
-  margin: 1em 0;
   width: 100%;
-  border: 2px solid var(--mint-cream);
+  color: black;
+  font-size: 1rem;
+  font-family: "Inter";
 }
 
-form input:focus {
+form input:focus,
+form textarea:focus {
   outline: none;
 }
 
+form textarea {
+  resize: none;
+  border-radius: 1em;
+  padding: 1em;
+  margin: 0.6666666667em 0 0;
+}
+
+form input {
+  border: none;
+  border-bottom: 2px solid var(--palatinate-blue);
+  padding: 1em;
+}
+
 form button {
-  background: none;
-  padding: 0.6666666667em 2em;
-  border-radius: 1.75em;
-  border: 2px solid var(--mint-cream);
-  text-transform: uppercase;
-  font-weight: 800;
-  letter-spacing: 2px;
-  font-size: 1rem;
   width: -moz-fit-content;
   width: fit-content;
-  align-self: center;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  transition: color 0.25s ease-in-out 0.25s;
-}
-
-form button::before {
-  content: "";
-  position: absolute;
-  height: 105%;
-  width: 105%;
-  top: 50%;
-  left: 0;
-  background: var(--mint-cream);
-  transform: translateY(150%);
-  z-index: -1;
-  transition: transform 0.25s ease-in-out;
-}
-
-form button:hover {
-  color: hsl(224, 92%, 46%);
-}
-
-form button:hover::before {
-  transform: translateY(-50%);
+  background: none;
+  color: var(--palatinate-blue);
+  border: 2px solid var(--palatinate-blue);
+  padding: 0.6666666667em 1.75em;
+  justify-self: center;
+  border-radius: 1.75em;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .background {
@@ -622,6 +740,10 @@ section {
 @media (max-width: 768px) {
   .container {
     max-width: 640px;
+  }
+
+  .slide-description {
+    border-radius: 0 0 1.5em 1.5em;
   }
 }
 

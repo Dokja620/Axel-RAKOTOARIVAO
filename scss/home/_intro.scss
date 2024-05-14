@@ -53,7 +53,7 @@
             transition: transform .5s ease-in-out, border .15s ease-in-out .5s;
         }
         &:hover{
-            color: hsla(224,92%,46%,1);
+            color: var(--palatinate-blue);
             border: 2px solid var(--mint-cream);
             box-shadow: 0px 0px 2px inset var(--mint-cream);
         }
