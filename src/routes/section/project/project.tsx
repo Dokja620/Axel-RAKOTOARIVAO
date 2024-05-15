@@ -51,6 +51,29 @@ export default component$(() => {
                     </div>
                 </div>
             </div>
+            
+            {/* // rectangles background */}
+            <div class="background third">
+                <div class="frame-box">
+                    <div class="frame"></div>
+                </div>
+                <div class="frame-box">
+                    <div class="frame"></div>
+                    <div class="frame"></div>
+                </div>
+                <div class="frame-box">
+                    <div class="frame"></div>
+                    <div class="frame"></div>
+                    <div class="frame"></div>
+                </div>
+                <div class="frame-box">
+                    <div class="frame"></div>
+                    <div class="frame"></div>
+                </div>
+                <div class="frame-box">
+                    <div class="frame"></div>
+                </div>
+            </div>
         </section>
     );
 });

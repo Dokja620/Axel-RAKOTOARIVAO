@@ -1,9 +1,11 @@
 import { component$ } from '@builder.io/qwik';
-import access from '/media/accesibility.svg';
-// import smile from '/media/smile.svg';
-import bolt from '/media/bolt.svg';
-import responsive from '/media/responsive.svg';
-import users from '/media/users.svg';
+// does imgs
+import bolt from '/media/skill/bolt.svg';
+import globe from '/media/skill/globe.svg';
+import puzzle from '/media/skill/puzzle.svg';
+import test from '/media/skill/test.svg';
+import users from '/media/skill/users.svg';
+import team from '/media/skill/team.svg';
 
 // tech stack
 import html from '/media/techs/devicon--html5.svg';
@@ -44,29 +46,57 @@ export default component$(() => {
                 <p>Je crée des interfaces réactives pour une expérience utilisateur intuitive et fluide.</p>
                 <div class="list">
                     <div class="skill">
+                        <span class="users"><img src={users} alt="users icon" width={75} height={75}/></span>
                         <h4>UI/UX Modernes</h4>
                         <p>Je crée des interfaces utilisateur modernes et esthétiques qui captivent les utilisateurs et renforcent la présence en ligne de votre entreprise.</p>
                     </div>
                     <div class="skill">
+                        <span class="bolt"><img src={bolt} alt="bolt icon" width={75} height={75}/></span>
                         <h4>Performances Optimisées</h4>
                         <p>J'optimise les performances des sites web pour garantir une expérience utilisateur rapide et fluide, augmentant ainsi l'engagement et la satisfaction des visiteurs.</p>
                     </div>
                     <div class="skill">
+                        <span class="access"><img src={globe} alt="globe icon" width={75} height={75}/></span>
                         <h4>Accessibilité Améliorée</h4>
                         <p>Je m'assure que votre site web est accessible à tous, ce qui élargit votre audience et renforce votre réputation en tant qu'entreprise inclusive.</p>
                     </div>
                     <div class="skill">
+                        <span class="test"><img src={test} alt="test icon" width={75} height={75}/></span>
                         <h4>Tests Rigoureux</h4>
                         <p>Je réalise des tests approfondis pour garantir la qualité et la fiabilité de votre application web, assurant une expérience utilisateur sans faille.</p>
                     </div>
                     <div class="skill">
+                        <span class="team"><img src={team} alt="collaboration icon" width={75} height={75}/></span>
                         <h4>Collaboration Efficace</h4>
                         <p>Je collabore étroitement avec votre équipe pour traduire vos idées en solutions web fonctionnelles et esthétiques, livrées dans les délais et selon vos spécifications.</p>
                     </div>
                     <div class="skill">
+                        <span class="puzzle"><img src={puzzle} alt="puzzle icon" width={75} height={75}/></span>
                         <h4>Solutions Personnalisées</h4>
                         <p>Je crée des solutions web sur mesure adaptées à vos besoins spécifiques, garantissant ainsi des résultats qui répondent pleinement à vos objectifs et exigences.</p>
                     </div>
+                </div>
+            </div>
+            {/* // rectangles background */}
+            <div class="background second">
+                <div class="frame-box">
+                    <div class="frame"></div>
+                </div>
+                <div class="frame-box">
+                    <div class="frame"></div>
+                    <div class="frame"></div>
+                </div>
+                <div class="frame-box">
+                    <div class="frame"></div>
+                    <div class="frame"></div>
+                    <div class="frame"></div>
+                </div>
+                <div class="frame-box">
+                    <div class="frame"></div>
+                    <div class="frame"></div>
+                </div>
+                <div class="frame-box">
+                    <div class="frame"></div>
                 </div>
             </div>
         </section>

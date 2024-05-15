@@ -68,6 +68,19 @@ body {
     right: 0;
     transform: rotate(-30deg) translate(25%, 15%);
     z-index: -1;
+    &.second{
+        top: -175px;
+        right: initial;
+        left: -300px;
+        opacity: .5;
+        transform: rotate(30deg) translate(0) scale(.7);
+    }
+    &.third{
+        top: initial;
+        bottom: -300px;
+        opacity: .3;
+        transform: rotate(-30deg) translate(25%, 15%) scale(2);
+    }
 }
 
 .frame-box{

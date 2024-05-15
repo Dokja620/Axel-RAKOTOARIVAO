@@ -1,4 +1,7 @@
 // Tech stack
+#skill{
+    position: relative;
+}
 .tech{
     h2{
         text-align: center;
@@ -62,6 +65,38 @@
         }
         p{
             line-height: 21px;
+        }
+    }
+}
+
+.skill{
+    position: relative;
+    overflow: hidden;
+    span{
+        position: absolute;
+        top: -8px;
+        left: 0;
+        z-index: -1;
+        opacity: .1;
+        scale: 3;
+        &.users{
+            top: 12px;
+            scale: 3;
+        }
+        &.access{
+            scale: 2.3;
+        }
+        &.test{
+            top: 4px;
+            scale: 2.2;
+        }
+        &.team{
+            top: 20px;
+            scale: 2.4;
+        }
+        &.puzzle{
+            top: 10px;
+            scale: 2;
         }
     }
 }

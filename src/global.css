@@ -251,6 +251,10 @@ footer {
   box-shadow: 0px 0px 2px inset var(--mint-cream);
 }
 
+#skill {
+  position: relative;
+}
+
 .tech h2 {
   text-align: center;
 }
@@ -323,13 +327,52 @@ footer {
   line-height: 21px;
 }
 
+.skill {
+  position: relative;
+  overflow: hidden;
+}
+
+.skill span {
+  position: absolute;
+  top: -8px;
+  left: 0;
+  z-index: -1;
+  opacity: 0.1;
+  scale: 3;
+}
+
+.skill span.users {
+  top: 12px;
+  scale: 3;
+}
+
+.skill span.access {
+  scale: 2.3;
+}
+
+.skill span.test {
+  top: 4px;
+  scale: 2.2;
+}
+
+.skill span.team {
+  top: 20px;
+  scale: 2.4;
+}
+
+.skill span.puzzle {
+  top: 10px;
+  scale: 2;
+}
+
 #project {
+  position: relative;
   min-height: none;
   height: 50vh;
   display: grid;
   align-content: center;
-  margin-top: 12%;
-  margin-bottom: 12%;
+  margin-top: 8%;
+  margin-bottom: 8%;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
@@ -380,6 +423,7 @@ footer {
 
 .web-creation {
   text-align: center;
+  margin-top: 12%;
 }
 
 #website {
@@ -819,6 +863,21 @@ form button::after {
   right: 0;
   transform: rotate(-30deg) translate(25%, 15%);
   z-index: -1;
+}
+
+.background.second {
+  top: -175px;
+  right: initial;
+  left: -300px;
+  opacity: 0.5;
+  transform: rotate(30deg) translate(0) scale(0.7);
+}
+
+.background.third {
+  top: initial;
+  bottom: -300px;
+  opacity: 0.3;
+  transform: rotate(-30deg) translate(25%, 15%) scale(2);
 }
 
 .frame-box {
