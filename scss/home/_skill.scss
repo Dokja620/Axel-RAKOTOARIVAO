@@ -40,11 +40,12 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, 375px);
         justify-content: center;
-        gap: $spacing-md;
+        gap: $spacing-lg;
         margin: $spacing-2xl 0 0;
         div{
             min-width: 300px;
             background: rgba(255, 255, 255, 0.2);
+            // TODO url('/media/bolt.svg') left center/cover no-repeat 
             border-radius: $spacing;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(5px);
@@ -53,10 +54,14 @@
         }
         h4{
             position: relative;
+            margin: 0 0 8px;
             span{
                 position: absolute;
                 opacity: 0;
             }
+        }
+        p{
+            line-height: 21px;
         }
     }
 }

@@ -39,16 +39,16 @@ export default component$(() => {
             <div class="form">
                 <form action="">
                     <div>
-                        <label for="name">Votre nom</label>
-                        <input id="name" type="text" placeholder="name" required/>
+                        <label for="name">Nom</label>
+                        <input id="name" type="text" placeholder="Aon" required/>
                     </div>
                     <div>
-                        <label for="name">Votre email</label>
-                        <input id="email" type="email" placeholder="email" required/>
+                        <label for="name">Adresse e-mail</label>
+                        <input id="email" type="email" placeholder="votremail@gmail.com" required/>
                     </div>
                     <div>
                         <label for="message">Votre message</label>
-                        <textarea name="message" id="message" rows={10}></textarea>
+                        <textarea name="message" id="message" rows={10} placeholder='...'></textarea>
                     </div>
 
                     <button>Envoyer</button>
