@@ -35,7 +35,6 @@ export default component$(() => {
     }
   });
 
-
   return (
     <section id="website">
       <div class="slider">

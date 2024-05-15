@@ -49,21 +49,27 @@
         background: url('/public/media/bg-proj/bat.webp') center;
         > .slide-description{
             background: rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            // border: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 2px solid rgba(255, 255, 255, 0.1);
+            border-right: 2px solid rgba(255, 255, 255, 0.1);
         }
     }
     &.panther{
         background: url('/public/media/bg-proj/pant.webp') center;
         > .slide-description{
             background: hsla(224,92%,46%, .3);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            // border: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 2px solid rgba(255, 255, 255, 0.1);
+            border-right: 2px solid rgba(255, 255, 255, 0.1);
         }
     }
     &.superman{
         background: url('/public/media/bg-proj/sup.webp') center;
         > .slide-description{
             background: hsla(0, 100%, 29%, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            // border: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 2px solid rgba(255, 255, 255, 0.1);
+            border-right: 2px solid rgba(255, 255, 255, 0.1);
         }
     }
 
@@ -152,7 +158,8 @@
     border-radius: 0 $spacing-lg 0 $spacing;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
     padding: $spacing;
     @media (max-width: $breakpoint-md) {
         border-radius: 0 0 $spacing-md $spacing-md;
@@ -172,6 +179,7 @@
         span{
             position: relative;
             top: 1px;
+            opacity: .7;
         }
         img{
             scale: 1.1;
@@ -185,6 +193,7 @@
     .p{
         text-transform: uppercase;
         font-weight: 500;
+        opacity: .8;
     }
 }
 

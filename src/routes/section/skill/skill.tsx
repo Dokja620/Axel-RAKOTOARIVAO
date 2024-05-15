@@ -41,49 +41,31 @@ export default component$(() => {
             </div>
             <div class="do">
                 <h2>Ce que je fais ?👀</h2>
-                <p>Je crée des interfaces utilisateur réactives et accessibles, garantissant une expérience utilisateur transparente sur tous les appareils.</p>
+                <p>Je crée des interfaces réactives pour une expérience utilisateur intuitive et fluide.</p>
                 <div class="list">
-                    <div>
-                        <h4>
-                            <span><img src={responsive} alt="responive icon" width={30} height={30}/></span>
-                            Conception Réactive
-                        </h4>
-                        <p>Je développe des interfaces qui s'adaptent à toutes les tailles d'écran, des mobiles aux grands moniteurs.</p>
+                    <div class="skill">
+                        <h4>UI/UX Modernes</h4>
+                        <p>Je crée des interfaces utilisateur modernes et esthétiques qui captivent les utilisateurs et renforcent la présence en ligne de votre entreprise.</p>
                     </div>
-                    <div>
-                        <h4>
-                            <span><img src={access} alt="accesibility icon" width={30} height={30}/></span>
-                            Accessibilité
-                        </h4>
-                        <p>Je m'assure que les contenus sont accessibles à tous les utilisateurs, y compris ceux ayant des besoins spécifiques.</p>
+                    <div class="skill">
+                        <h4>Performances Optimisées</h4>
+                        <p>J'optimise les performances des sites web pour garantir une expérience utilisateur rapide et fluide, augmentant ainsi l'engagement et la satisfaction des visiteurs.</p>
                     </div>
-                    <div>
-                        <h4>
-                            <span><img src={users} alt="users icon" width={30} height={30}/></span>
-                            Expérience User
-                        </h4>
-                        <p>Je focalise sur la facilité d'utilisation et l'engagement de l'utilisateur pour améliorer l'interaction avec le produit.</p>
+                    <div class="skill">
+                        <h4>Accessibilité Améliorée</h4>
+                        <p>Je m'assure que votre site web est accessible à tous, ce qui élargit votre audience et renforce votre réputation en tant qu'entreprise inclusive.</p>
                     </div>
-                    <div>
-                        <h4>
-                            <span><img src={bolt} alt="bolt icon" width={30} height={30}/></span>
-                            Performance Optimal
-                        </h4>
-                        <p>Je travaille à optimiser la performance des applications pour des chargements rapides et une réactivité élevée.</p>
+                    <div class="skill">
+                        <h4>Tests Rigoureux</h4>
+                        <p>Je réalise des tests approfondis pour garantir la qualité et la fiabilité de votre application web, assurant une expérience utilisateur sans faille.</p>
                     </div>
-                    <div>
-                        <h4>
-                            <span><img src={bolt} alt="bolt icon" width={30} height={30}/></span>
-                            Performance Optimal
-                        </h4>
-                        <p>Je travaille à optimiser la performance des applications pour des chargements rapides et une réactivité élevée.</p>
+                    <div class="skill">
+                        <h4>Collaboration Efficace</h4>
+                        <p>Je collabore étroitement avec votre équipe pour traduire vos idées en solutions web fonctionnelles et esthétiques, livrées dans les délais et selon vos spécifications.</p>
                     </div>
-                    <div>
-                        <h4>
-                            <span><img src={bolt} alt="bolt icon" width={30} height={30}/></span>
-                            Performance Optimal
-                        </h4>
-                        <p>Je travaille à optimiser la performance des applications pour des chargements rapides et une réactivité élevée.</p>
+                    <div class="skill">
+                        <h4>Solutions Personnalisées</h4>
+                        <p>Je crée des solutions web sur mesure adaptées à vos besoins spécifiques, garantissant ainsi des résultats qui répondent pleinement à vos objectifs et exigences.</p>
                     </div>
                 </div>
             </div>

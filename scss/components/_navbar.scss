@@ -4,12 +4,29 @@ header{
 nav{
     display: flex;
     justify-content: space-between;
-    background: var(--delft-blue);
+    align-items: center;
     padding: $spacing-xs $spacing-md;
-    border-radius: $spacing-lg;
 }
 
 .nav-links ul{
     display: flex;
-    gap: $spacing;
+    gap: $spacing-xl;
+}
+
+.language{
+    position: relative;
+    display: flex;
+    gap: 2px;
+    p{
+        padding: 2px 8px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: .25s;
+        &:nth-child(1){
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    }
 }
