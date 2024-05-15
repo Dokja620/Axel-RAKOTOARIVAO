@@ -689,7 +689,7 @@ footer {
 }
 
 .contact .social-media span:nth-child(1) {
-  transition: 0.35s width ease-in-out;
+  transition: 0.35s width ease-in-out 0.25s;
 }
 
 .contact .social-media span:nth-child(1):hover {
@@ -711,10 +711,11 @@ footer {
   opacity: 0;
   transform: translateX(-25px);
   transition: 0.25s;
+  transition-delay: 0.25s;
 }
 
 .contact .social-media span:nth-child(2) {
-  transition: 0.35s width ease-in-out;
+  transition: 0.35s width ease-in-out 0.15s;
 }
 
 .contact .social-media span:nth-child(2):hover {
@@ -736,6 +737,11 @@ footer {
   opacity: 0;
   transform: translateX(-25px);
   transition: 0.25s;
+  transition-delay: 0.25s;
+}
+
+.contact .social-media span:nth-child(3) {
+  transition: 0.35s width ease-in-out 0.15s;
 }
 
 .contact .social-media span:nth-child(3):hover::after {
@@ -753,6 +759,7 @@ footer {
   opacity: 0;
   transform: translateX(-25px);
   transition: 0.25s;
+  transition-delay: 0.25s;
 }
 
 form {
