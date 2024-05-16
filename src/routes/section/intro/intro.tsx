@@ -7,7 +7,7 @@ export default component$(() => {
         <section id="intro" class="container">
             <div class="bio">
                 <div class="info">
-                    <h1>Hey🙂 ! Je suis</h1>
+                    <h1>Hey<span class="emoji">🙂</span>! Je suis</h1>
                     <h1>Axel RAKOTOARIVAO</h1>
                     <h1>Développeur Front-End</h1>
                     <p>

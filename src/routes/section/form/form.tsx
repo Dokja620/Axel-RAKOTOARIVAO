@@ -40,7 +40,7 @@ export default component$(() => {
                 <form action="">
                     <div>
                         <label for="name">Nom</label>
-                        <input id="name" type="text" placeholder="Aon" required/>
+                        <input id="name" type="text" placeholder="Jenna" required/>
                     </div>
                     <div>
                         <label for="name">Adresse e-mail</label>

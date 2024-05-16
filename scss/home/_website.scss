@@ -2,6 +2,9 @@
 .web-creation{
     text-align: center;
     margin-top: 12%;
+    @media (max-width: $breakpoint-md) {
+        padding: 0 $spacing;
+    }
 }
 #website{
     width: 100vw;

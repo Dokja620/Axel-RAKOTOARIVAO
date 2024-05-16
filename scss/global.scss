@@ -24,7 +24,7 @@
 body {
     min-height: 100dvh;
     max-width: 100vw;
-    overflow-x: hidden;
+    overflow-x: clip;
     display: grid;
     grid-template-rows: auto 1fr auto;
     background-color:hsla(220,100%,22%,1);
@@ -49,8 +49,8 @@ body {
     }
 }
 
-@import './shared/typo';
 @import './shared/var';
+@import './shared/typo';
 @import './components/navbar';
 @import './components/footer';
 @import './responsive';
@@ -99,7 +99,7 @@ main {
     overflow: hidden;
 }
 section {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 // Fixed scroll/get to top

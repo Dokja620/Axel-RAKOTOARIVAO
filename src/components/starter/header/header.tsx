@@ -4,7 +4,7 @@ export default component$(() => {
     return (
         <header>
             <nav>
-                <div class="logo">Acceuil</div>
+                <div class="logo">Bienvenue</div>
                 <div class="nav-links">
                     <ul>
                         <li>Compétence</li>

@@ -5,6 +5,30 @@
     > div{
         width: 50%;
     }
+    @media (max-width: $breakpoint-xl) {
+        padding: 0 $spacing-lg;
+        gap: $spacing-lg;
+    }
+    @media (max-width: $breakpoint-lg) {
+        flex-direction: column;
+        gap: $spacing-xxl;
+        margin-bottom: $spacing-xxl;
+        > div{
+            width: 100%;
+            max-width: 550px;
+        }
+        .details{
+            > div{
+                margin: $spacing-md 0;
+            }
+        }
+        .contact{
+            gap: $spacing;
+            margin: 0 0 $spacing-xxl;
+        }
+    }
+    @media (max-width: $breakpoint-sm) {
+    }
 }
 .contact{
     display: flex;

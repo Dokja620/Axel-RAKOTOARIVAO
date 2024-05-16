@@ -1,6 +1,9 @@
 footer{
     text-align: center;
     padding: $spacing 0 $spacing-lg;
+    @media (max-width: $breakpoint-xs) {
+        margin: $spacing-xxl 0 0;
+    }
 }
 
 .copyright{

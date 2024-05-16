@@ -3,6 +3,15 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 100vw;
+    overflow-x: clip;
+    @media (max-width: $breakpoint-sm) {
+        .info {
+            max-width: none;
+        }
+        padding: 0 $spacing;
+        margin-bottom: 100px;
+    }
 }
 
 .bio {
@@ -26,7 +35,7 @@
     margin: $spacing-xl 0 0;
     button{
         background: none;
-        border: 2px dotted var(--mint-cream);
+        border: 2px solid var(--mint-cream);
         padding: $spacing-xs $spacing-lg;
         border-radius: $spacing-lg;
         text-transform: uppercase;

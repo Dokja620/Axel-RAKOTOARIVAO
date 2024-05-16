@@ -1,5 +1,8 @@
 header{
-    padding: $spacing
+    padding: $spacing;
+    @media (max-width: $breakpoint-lg) {
+        display: none;
+    }
 }
 nav{
     display: flex;

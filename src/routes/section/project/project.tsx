@@ -50,6 +50,8 @@ export default component$(() => {
                         <span><img src={fork} alt="fork icon" width={20} height={20}/></span>
                     </div>
                 </div>
+                <div class="tools more">
+                </div>
             </div>
             
             {/* // rectangles background */}
