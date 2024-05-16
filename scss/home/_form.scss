@@ -28,6 +28,12 @@
         }
     }
     @media (max-width: $breakpoint-sm) {
+        input{
+            padding: $spacing-xs;
+        }
+        form{
+            padding: $spacing-lg $spacing;
+        }
     }
 }
 .contact{

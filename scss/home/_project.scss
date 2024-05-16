@@ -1,20 +1,30 @@
 #project{
     position: relative;
-    min-height: none;
-    height: 50vh;
+    min-height: 50vh;
     display: grid;
     align-content: center;
     margin-top: 8%;
     margin-bottom: 8%;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding: $spacing-xxl 0;
     h2{
         text-align: center;
     }
+    @media (max-width: $breakpoint-lg) {
+        padding: $spacing-xxl $spacing;
+        .utilities{
+            grid-template-columns: repeat(auto-fit, 46%);
+        }
+    }
+    @media (max-width: $breakpoint-md) {
+        padding: $spacing-xxl $spacing;
+    }
     @media (max-width: $breakpoint-sm) {
-        padding: 0 $spacing;
-        h2{
-            display: none;
+        padding: $spacing-xxl $spacing;
+        border: none;
+        .utilities{
+            grid-template-columns: repeat(auto-fit, 90%);
         }
     }
 }

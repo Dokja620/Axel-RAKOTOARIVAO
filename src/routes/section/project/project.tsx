@@ -17,7 +17,7 @@ export default component$(() => {
                         <a href="http://" target="_blank">dokja620/qwik-animate</a>
                     </div>
                     <div class="desc">
-                        <p>QwikAnimate : 🌟 Bibliothèque d'animations au défilement pour QwikJS ... </p>
+                        <p>Qwik Animate : 🌟 Bibliothèque d'animations au défilement pour QwikJS ... </p>
                     </div>
                     <div class="foot">
                         <span><img src={star} alt="star icon" width={20} height={20}/></span>
