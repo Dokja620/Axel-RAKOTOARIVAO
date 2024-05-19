@@ -24,7 +24,7 @@
 body {
     min-height: 100dvh;
     width: 100vw;
-    overflow-y: hidden;
+    overflow-x: hidden;
     display: grid;
     grid-template-rows: auto 1fr auto;
     background-color:hsla(220,100%,22%,1);
@@ -120,7 +120,8 @@ section {
     position: relative;
     cursor: pointer;
     &:hover::before{
-        transform: translateY(-50%) scaleX(1);
+        transform: translate(45px, -50%);
+        opacity: 1;
     }
     &::after{
         content: '';
@@ -140,11 +141,12 @@ section {
         position: absolute;
         width: max-content;
         font-weight: 200;
-        left: 35px;
+        left: 0;
         top: 50%;
-        transform: translateY(-50%) scaleX(0);
+        transform: translate(30px, -50%);
+        opacity: 0;
         transform-origin: left;
-        transition: transform .15s ease-in-out;
+        transition: transform .25s ease-in-out, opacity .15s ease-in-out;
     }
     .go-to-top{
         height: 8px;

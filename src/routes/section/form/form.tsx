@@ -7,12 +7,13 @@ import whatsapp from '/media/social/whatsapp.svg';
 import mail from '/media/social/mail.svg';
 import phone from '/media/social/phone.svg';
 import location from '/media/social/location.svg';
+import { Animate } from '@dokja620/qwik-animate';
 // Fith section | wanna talk ?
 
 export default component$(() => {
     return (
         <section id="form" class="container">
-            <div class="contact">
+            <Animate class="contact" animationKeys="@sl-x_lv-down+++_child-ascend-up_speed-up+" threshold="0.3, 0.5" runOnce>
                 <h2>Laissez-moi transformer vos idées en réalité digitale! 💭</h2>
 
                 <div class="details">
@@ -35,8 +36,8 @@ export default component$(() => {
                     <span><img src={linkedin} alt="icon linkedin" width={35} height={35}/></span>
                     <span><img src={whatsapp} alt="icon whatsapp" width={35} height={35}/></span>
                 </div>
-            </div>
-            <div class="form">
+            </Animate>
+            <Animate class="form" animationKeys="@sl-x_lv-down+++_speed-up" threshold="0.3, 0.5" runOnce>
                 <form action="">
                     <div>
                         <label for="name">Nom</label>
@@ -53,7 +54,7 @@ export default component$(() => {
 
                     <button>Envoyer</button>
                 </form>
-            </div>
+            </Animate>
         </section>
     );
 });

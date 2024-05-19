@@ -36,6 +36,12 @@
                 order: 12;
             }
         }
+        @media (max-width: $breakpoint-xs) {
+            gap: $spacing-lg;
+            li{
+                transform: scale(.8);
+            }
+        }
     }
 }
 

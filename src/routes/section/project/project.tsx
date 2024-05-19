@@ -3,6 +3,7 @@ import { component$ } from '@builder.io/qwik';
 import repo from '/media/repo.svg';
 import star from '/media/star.svg';
 import fork from '/media/fork.svg';
+import { Animate } from '@dokja620/qwik-animate';
 
 // Third section | What I have done so far ?
 
@@ -10,7 +11,7 @@ export default component$(() => {
     return (
         <section id="project" class="container">
             <h2>Mes Projets Front-End sur GitHub ✨</h2>
-            <div class="utilities">
+            <Animate class="utilities" animationKeys="@sp-in_lv-down+++_child-ascend" runOnce>
                 <div class="tools qwik-animate">
                     <div class="title">
                         <span><img src={repo} alt="repository icon" width={25} height={25}/></span>
@@ -52,30 +53,7 @@ export default component$(() => {
                 </div>
                 <div class="tools more">
                 </div>
-            </div>
-            
-            {/* // rectangles background */}
-            <div class="background third">
-                <div class="frame-box">
-                    <div class="frame"></div>
-                </div>
-                <div class="frame-box">
-                    <div class="frame"></div>
-                    <div class="frame"></div>
-                </div>
-                <div class="frame-box">
-                    <div class="frame"></div>
-                    <div class="frame"></div>
-                    <div class="frame"></div>
-                </div>
-                <div class="frame-box">
-                    <div class="frame"></div>
-                    <div class="frame"></div>
-                </div>
-                <div class="frame-box">
-                    <div class="frame"></div>
-                </div>
-            </div>
+            </Animate>
         </section>
     );
 });

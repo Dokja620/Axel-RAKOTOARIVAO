@@ -1,13 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 @font-face {
-    font-family: 'emoji';
-    src: url('/fonts/seguiemj.ttf');
+    font-family: 'Inter';
+    font-display: swap;
+    src: url('/fonts/inter.woff2');
 }
+// @font-face {
+//     font-family: 'emoji';
+//     src: url('/fonts/seguiemj.ttf');
+// }
 
-.emoji {
-    font-family: 'emoji';
-}
+// .emoji {
+//     font-family: 'emoji';
+// }
 
 body,
 button {

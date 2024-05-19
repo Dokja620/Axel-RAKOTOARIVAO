@@ -1,7 +1,5 @@
 /* Default styles */
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
-
 :root {
   /* CSS HSL */
   --lavender-web: hsla(248, 54%, 89%, 1);
@@ -27,7 +25,7 @@
 body {
   min-height: 100dvh;
   width: 100vw;
-  overflow-y: hidden;
+  overflow-x: hidden;
   display: grid;
   grid-template-rows: auto 1fr auto;
   background-color: hsl(220, 100%, 22%);
@@ -48,12 +46,9 @@ body::-webkit-scrollbar-thumb {
 }
 
 @font-face {
-  font-family: "emoji";
-  src: url("/fonts/seguiemj.ttf");
-}
-
-.emoji {
-  font-family: "emoji";
+  font-family: "Inter";
+  font-display: swap;
+  src: url("/fonts/inter.woff2");
 }
 
 body,
@@ -199,6 +194,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 
 .bio {
@@ -207,6 +203,10 @@ footer {
 
 .bio .info {
   max-width: 600px;
+}
+
+.bio .info p {
+  margin: 1em 0 0;
 }
 
 .bio .me {
@@ -219,7 +219,7 @@ footer {
 }
 
 .get-in-touch {
-  margin: 2em 0 0;
+  margin: 3em 0 0;
 }
 
 .get-in-touch button {
@@ -965,7 +965,8 @@ section {
 }
 
 .scroll-top:hover::before {
-  transform: translateY(-50%) scaleX(1);
+  transform: translate(45px, -50%);
+  opacity: 1;
 }
 
 .scroll-top::after {
@@ -988,11 +989,12 @@ section {
   width: -moz-max-content;
   width: max-content;
   font-weight: 200;
-  left: 35px;
+  left: 0;
   top: 50%;
-  transform: translateY(-50%) scaleX(0);
+  transform: translate(30px, -50%);
+  opacity: 0;
   transform-origin: left;
-  transition: transform 0.15s ease-in-out;
+  transition: transform 0.25s ease-in-out, opacity 0.15s ease-in-out;
 }
 
 .scroll-top .go-to-top {
@@ -1058,6 +1060,12 @@ section {
 
   100% {
     transform: translate(-50%, -50%);
+  }
+}
+
+@media (min-width: 1024px) {
+  .bio .info h1 {
+    line-height: 50px;
   }
 }
 
@@ -1214,6 +1222,11 @@ section {
     max-width: none;
   }
 
+  #intro .frame {
+    width: 175px;
+    border-radius: 0.6666666667em;
+  }
+
   .tech ul {
     gap: 2em;
   }
@@ -1259,6 +1272,14 @@ section {
 
   .container {
     width: 100%;
+  }
+
+  .tech ul {
+    gap: 1.75em;
+  }
+
+  .tech ul li {
+    transform: scale(0.8);
   }
 
   .do .list div {

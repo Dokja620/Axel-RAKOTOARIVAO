@@ -42,6 +42,7 @@
     "vite-tsconfig-paths": "^4.2.1"
   },
   "dependencies": {
+    "@dokja620/qwik-animate": "^1.0.0",
     "autoprefixer": "^10.4.19",
     "gulp": "^5.0.0",
     "gulp-group-css-media-queries": "^1.2.2",
