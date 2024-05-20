@@ -27,7 +27,7 @@ export default component$(() => {
     return (
         <section id="skill" class="container">
             <Animate class="tech" animationKeys="@sl-y_lv-down+_speed-down" runOnce>
-                <h2>Les technologies que j'utilise 🚀</h2>
+                <h2>Les technologies que j'utilise <span class="emoji">🚀</span></h2>
                 <ul>
                     <li><span><img src={html} title='html5' alt="icon html5" width={65} height={65}/></span></li>
                     <li><span><img src={css} title='css3' alt="icon css3" width={72} height={72}/></span></li>

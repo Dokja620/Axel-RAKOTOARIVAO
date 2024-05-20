@@ -14,7 +14,7 @@ export default component$(() => {
     return (
         <section id="form" class="container">
             <Animate class="contact" animationKeys="@sl-x_lv-down+++_child-ascend-up_speed-up+" threshold="0.3, 0.5" runOnce>
-                <h2>Laissez-moi transformer vos idées en réalité digitale! 💭</h2>
+                <h2>Laissez-moi transformer vos idées en réalité digitale! <span class="emoji">💭</span></h2>
 
                 <div class="details">
                     <div>

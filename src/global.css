@@ -20,6 +20,7 @@
   text-decoration: none;
   font-weight: normal;
   color: var(--mint-cream);
+  scroll-behavior: smooth;
 }
 
 body {
@@ -49,6 +50,15 @@ body::-webkit-scrollbar-thumb {
   font-family: "Inter";
   font-display: swap;
   src: url("/fonts/inter.woff2");
+}
+
+@font-face {
+  font-family: "emoji";
+  src: url("/fonts/public/minified/seguiemj.ttf");
+}
+
+.emoji {
+  font-family: "emoji";
 }
 
 body,
@@ -121,6 +131,34 @@ nav {
 .nav-links ul {
   display: flex;
   gap: 2em;
+}
+
+.nav-links ul a {
+  position: relative;
+  transition: color 0.25s ease-in-out;
+}
+
+.nav-links ul a:hover {
+  color: white;
+}
+
+.nav-links ul a:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.nav-links ul a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  background: var(--mint-cream);
+  opacity: 0.8;
+  width: 100%;
+  height: 2px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.25s ease-in-out;
 }
 
 .language {
@@ -934,10 +972,6 @@ form button::after {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 1em;
   margin: 0.6666666667em;
-}
-
-main {
-  overflow: hidden;
 }
 
 section {

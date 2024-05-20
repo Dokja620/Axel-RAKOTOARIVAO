@@ -10,7 +10,7 @@ import { Animate } from '@dokja620/qwik-animate';
 export default component$(() => {
     return (
         <section id="project" class="container">
-            <h2>Mes Projets Front-End sur GitHub ✨</h2>
+            <h2>Mes Projets Front-End sur GitHub <span class="emoji">✨</span></h2>
             <Animate class="utilities" animationKeys="@sp-in_lv-down+++_child-ascend" runOnce>
                 <div class="tools qwik-animate">
                     <div class="title">
@@ -18,7 +18,7 @@ export default component$(() => {
                         <a href="http://" target="_blank">dokja620/qwik-animate</a>
                     </div>
                     <div class="desc">
-                        <p>Qwik Animate : 🌟 Bibliothèque d'animations au défilement pour QwikJS ... </p>
+                        <p>Qwik Animate : <span class="emoji">🌟</span> Bibliothèque d'animations au défilement pour QwikJS ... </p>
                     </div>
                     <div class="foot">
                         <span><img src={star} alt="star icon" width={20} height={20}/></span>
@@ -31,7 +31,7 @@ export default component$(() => {
                         <a href="http://" target="_blank">dokja620/qwik-slider</a>
                     </div>
                     <div class="desc">
-                        <p>Qwik Slider : 💫 Composant modulable de carrousel pour QwikJS... </p>
+                        <p>Qwik Slider : <span class="emoji">💫</span> Composant modulable de carrousel pour QwikJS... </p>
                     </div>
                     <div class="foot">
                         <span><img src={star} alt="star icon" width={20} height={20}/></span>
@@ -44,7 +44,7 @@ export default component$(() => {
                         <a href="http://" target="_blank">dokja620/qwik-loader</a>
                     </div>
                     <div class="desc">
-                        <p>Qwik Loader : ⚡️ Solution simple pour ajouter une animation de chargement... </p>
+                        <p>Qwik Loader : <span class="emoji">⚡️</span> Solution simple pour ajouter une animation de chargement... </p>
                     </div>
                     <div class="foot">
                         <span><img src={star} alt="star icon" width={20} height={20}/></span>
@@ -54,6 +54,28 @@ export default component$(() => {
                 <div class="tools more">
                 </div>
             </Animate>
+            {/* // rectangles background */}
+            <div class="background third">
+                <div class="frame-box">
+                    <div class="frame"></div>
+                </div>
+                <div class="frame-box">
+                    <div class="frame"></div>
+                    <div class="frame"></div>
+                </div>
+                <div class="frame-box">
+                    <div class="frame"></div>
+                    <div class="frame"></div>
+                    <div class="frame"></div>
+                </div>
+                <div class="frame-box">
+                    <div class="frame"></div>
+                    <div class="frame"></div>
+                </div>
+                <div class="frame-box">
+                    <div class="frame"></div>
+                </div>
+            </div>
         </section>
     );
 });

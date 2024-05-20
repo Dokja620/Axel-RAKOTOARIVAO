@@ -5,14 +5,14 @@
     font-display: swap;
     src: url('/fonts/inter.woff2');
 }
-// @font-face {
-//     font-family: 'emoji';
-//     src: url('/fonts/seguiemj.ttf');
-// }
+@font-face {
+    font-family: 'emoji';
+    src: url('/fonts/public/minified/seguiemj.ttf');
+}
 
-// .emoji {
-//     font-family: 'emoji';
-// }
+.emoji {
+    font-family: 'emoji';
+}
 
 body,
 button {

@@ -7,10 +7,10 @@ export default component$(() => {
                 <div class="logo">Bienvenue</div>
                 <div class="nav-links">
                     <ul>
-                        <li>Compétence</li>
-                        <li>Website</li>
-                        <li>Projets</li>
-                        <li>Contact</li>
+                        <li><a href="#skill">Compétence</a></li>
+                        <li><a href="#website">Website</a></li>
+                        <li><a href="#project">Projets</a></li>
+                        <li><a href="#form">Contact</a></li>
                     </ul>
                 </div>
                 <div class="language">

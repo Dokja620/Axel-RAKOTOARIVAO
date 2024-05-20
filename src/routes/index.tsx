@@ -10,7 +10,7 @@ export default component$(() => (
     <>
         <Intro/>
         <Skill/>
-        <h2 class="web-creation container">Mes créations digitales dans le domaine du web 🤗</h2>
+        <h2 class="web-creation container">Mes créations digitales dans le domaine du web <span class="emoji">🎨</span></h2>
         <Website/>
         <Project/>
         <Form/>
