@@ -974,6 +974,10 @@ form button::after {
   margin: 0.6666666667em;
 }
 
+main {
+  overflow: hidden;
+}
+
 section {
   min-height: 100vh;
 }
@@ -1309,7 +1313,7 @@ section {
   }
 
   .tech ul {
-    gap: 1.75em;
+    gap: 0 1.75em;
   }
 
   .tech ul li {

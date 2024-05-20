@@ -96,6 +96,10 @@ body {
     margin: $spacing-xs;
 }
 
+main {
+    overflow: hidden;
+}
+
 section {
     min-height: 100vh;
 }
