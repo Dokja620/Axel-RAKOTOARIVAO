@@ -1,8 +1,8 @@
 import { component$ } from '@builder.io/qwik';
 
-import repo from '/media/repo.svg';
-import star from '/media/star.svg';
-import fork from '/media/fork.svg';
+import repo from '/public/media/repo.svg';
+import star from '/public/media/star.svg';
+import fork from '/public/media/fork.svg';
 import { Animate } from '@dokja620/qwik-animate';
 
 // Third section | What I have done so far ?

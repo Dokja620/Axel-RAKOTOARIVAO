@@ -1,12 +1,12 @@
 import { component$ } from '@builder.io/qwik';
 
-import github from '/media/social/github.svg';
-import linkedin from '/media/social/linkedin.svg';
-import whatsapp from '/media/social/whatsapp.svg';
+import github from '/public/media/social/github.svg';
+import linkedin from '/public/media/social/linkedin.svg';
+import whatsapp from '/public/media/social/whatsapp.svg';
 
-import mail from '/media/social/mail.svg';
-import phone from '/media/social/phone.svg';
-import location from '/media/social/location.svg';
+import mail from '/public/media/social/mail.svg';
+import phone from '/public/media/social/phone.svg';
+import location from '/public/media/social/location.svg';
 import { Animate } from '@dokja620/qwik-animate';
 // Fith section | wanna talk ?
 

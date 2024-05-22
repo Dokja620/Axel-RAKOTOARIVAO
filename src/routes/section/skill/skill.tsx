@@ -1,24 +1,24 @@
 import { component$ } from '@builder.io/qwik';
 // does imgs
-import bolt from '/media/skill/bolt.svg';
-import globe from '/media/skill/globe.svg';
-import puzzle from '/media/skill/puzzle.svg';
-import test from '/media/skill/test.svg';
-import users from '/media/skill/users.svg';
-import team from '/media/skill/team.svg';
+import bolt from '/public/media/skill/bolt.svg';
+import globe from '/public/media/skill/globe.svg';
+import puzzle from '/public/media/skill/puzzle.svg';
+import test from '/public/media/skill/test.svg';
+import users from '/public/media/skill/users.svg';
+import team from '/public/media/skill/team.svg';
 
 // tech stack
-import html from '/media/techs/devicon--html5.svg';
-import css from '/media/techs/logos--css3.svg';
-import javascript from '/media/techs/logos--javascript.svg';
-import qwik from '/media/techs/logos--qwik.svg';
-import react from '/media/techs/logos--react.svg';
-import alpine from '/media/techs/logos--alpinejs.svg';
-import bun from '/media/techs/logos--bun.svg';
-import gulp from '/media/techs/logos--gulp.svg';
-import postcss from '/media/techs/logos--postcss.svg';
-import sass from '/media/techs/logos--sass.svg';
-import git from '/media/techs/logos--git.svg';
+import html from '/public/media/techs/devicon--html5.svg';
+import css from '/public/media/techs/logos--css3.svg';
+import javascript from '/public/media/techs/logos--javascript.svg';
+import qwik from '/public/media/techs/logos--qwik.svg';
+import react from '/public/media/techs/logos--react.svg';
+import alpine from '/public/media/techs/logos--alpinejs.svg';
+import bun from '/public/media/techs/logos--bun.svg';
+import gulp from '/public/media/techs/logos--gulp.svg';
+import postcss from '/public/media/techs/logos--postcss.svg';
+import sass from '/public/media/techs/logos--sass.svg';
+import git from '/public/media/techs/logos--git.svg';
 import { Animate } from '@dokja620/qwik-animate';
 
 // Second section | What do I do ?

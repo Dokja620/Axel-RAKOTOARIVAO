@@ -1,5 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import qwikFoot from '/media/footer/logos--qwik.webp';
+import qwikFoot from '/public/media/footer/logos--qwik.webp';
 // Align
 
 export default component$(() => {

@@ -1,5 +1,5 @@
 import { component$, $ } from '@builder.io/qwik';
-import github from '/media/social/github.svg';
+import github from '/public/media/social/github.svg';
 
 interface Slide {
   className: string;
