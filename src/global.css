@@ -47,18 +47,51 @@ body::-webkit-scrollbar-thumb {
 }
 
 @font-face {
-  font-family: "Inter";
   font-display: swap;
-  src: url("/fonts/inter.woff2");
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 200;
+  src: url("/fonts/inter/inter-v13-latin_latin-ext-200.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: "emoji";
-  src: url("/fonts/public/minified/seguiemj.ttf");
+  font-display: swap;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  src: url("/fonts/inter/inter-v13-latin_latin-ext-300.woff2") format("woff2");
 }
 
-.emoji {
-  font-family: "emoji";
+@font-face {
+  font-display: swap;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/fonts/inter/inter-v13-latin_latin-ext-500.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/fonts/inter/inter-v13-latin_latin-ext-600.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/inter/inter-v13-latin_latin-ext-700.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  src: url("/fonts/inter/inter-v13-latin_latin-ext-800.woff2") format("woff2");
 }
 
 body,

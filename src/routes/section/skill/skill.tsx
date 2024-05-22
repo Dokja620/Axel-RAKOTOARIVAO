@@ -45,7 +45,7 @@ export default component$(() => {
             <div class="do">
                 <h2>Ce que je fais ?👀</h2>
                 <p>Je crée des interfaces réactives pour une expérience utilisateur intuitive et fluide.</p>
-                <Animate class="list" animationKeys="@sl-y_child-ascend-up_lv-down+++ @fd @sp-in" threshold="0.7, 0.5" runOnce>
+                <Animate class="list" animationKeys="@sl-y_child-ascend-up_lv-down+++ @fd @sp-in" threshold="0.3, 0.2">
                     <div class="skill">
                         <span class="users"><img src={users} alt="users icon" width={75} height={75}/></span>
                         <h4>UI/UX Modernes</h4>
