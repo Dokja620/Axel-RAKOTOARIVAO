@@ -19,7 +19,6 @@ import gulp from '/public/media/techs/logos--gulp.svg';
 import postcss from '/public/media/techs/logos--postcss.svg';
 import sass from '/public/media/techs/logos--sass.svg';
 import git from '/public/media/techs/logos--git.svg';
-import { Animate } from '@dokja620/qwik-animate';
 
 // Second section | What do I do ?
 
@@ -27,7 +26,7 @@ export default component$(() => {
     return (
         <section id="skill" class="container">
             <h2 style={{textAlign: "center"}}>Les technologies que j'utilise <span class="emoji">🚀</span></h2>
-            <Animate class="tech" animationKeys="@sl-y_lv-down+_speed-down">
+            <div class="tech">
                 <ul>
                     <li><span><img src={html} title='html5' alt="icon html5" width={65} height={65}/></span></li>
                     <li><span><img src={css} title='css3' alt="icon css3" width={72} height={72}/></span></li>
@@ -41,11 +40,11 @@ export default component$(() => {
                     <li><span><img src={gulp} title='gulp' alt="icon gulp" width={65} height={65}/></span></li>
                     <li><span><img src={postcss} title='postcss' alt="icon postcss" width={65} height={65}/></span></li>
                 </ul>
-            </Animate>
+            </div>
             <div class="do">
                 <h2>Ce que je fais ?👀</h2>
                 <p>Je crée des interfaces réactives pour une expérience utilisateur intuitive et fluide.</p>
-                <Animate class="list" animationKeys="@sl-y_child-ascend-up_lv-down+++ @fd @sp-in" threshold="0.3, 0.2">
+                <div class="list">
                     <div class="skill">
                         <span class="users"><img src={users} alt="users icon" width={75} height={75}/></span>
                         <h4>UI/UX Modernes</h4>
@@ -76,29 +75,29 @@ export default component$(() => {
                         <h4>Solutions Personnalisées</h4>
                         <p>Je crée des solutions web sur mesure adaptées à vos besoins spécifiques, garantissant ainsi des résultats qui répondent pleinement à vos objectifs et exigences.</p>
                     </div>
-                </Animate>
+                </div>
             </div>
             {/* // rectangles background */}
             <div class="background second">
-                <Animate class="frame-box" animationKeys="@sc-in_child-ascend-up+ @pr-in @sp-in">
+                <div class="frame-box">
                     <div class="frame"></div>
-                </Animate>
-                <Animate class="frame-box" animationKeys="@sc-in_child-ascend-up+ @pr-in @sp-in">
-                    <div class="frame"></div>
-                    <div class="frame"></div>
-                </Animate>
-                <Animate class="frame-box" animationKeys="@sc-in_child-ascend-up+ @pr-in @sp-in">
+                </div>
+                <div class="frame-box">
                     <div class="frame"></div>
                     <div class="frame"></div>
+                </div>
+                <div class="frame-box">
                     <div class="frame"></div>
-                </Animate>
-                <Animate class="frame-box" animationKeys="@sc-in_child-ascend-up+ @pr-in @sp-in">
                     <div class="frame"></div>
                     <div class="frame"></div>
-                </Animate>
-                <Animate class="frame-box" animationKeys="@sc-in_child-ascend-up+ @pr-in @sp-in" threshold="0.3, 0.7">
+                </div>
+                <div class="frame-box">
                     <div class="frame"></div>
-                </Animate>
+                    <div class="frame"></div>
+                </div>
+                <div class="frame-box">
+                    <div class="frame"></div>
+                </div>
             </div>
         </section>
     );

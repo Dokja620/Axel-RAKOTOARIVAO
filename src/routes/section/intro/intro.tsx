@@ -1,12 +1,11 @@
 import { component$ } from '@builder.io/qwik';
-import { Animate } from '@dokja620/qwik-animate';
 // First section | Introducing Axel
 
 export default component$(() => {
     return (
         <section id="intro" class="container">
             <div class="bio">
-                <Animate class="info" animationKeys="@sl-y!_ease-out-back_child-ascend-up_lv-down+++_delay-6 @fd"  threshold="0.2, 0.9">
+                <div class="info">
                     <h1>
                         <span lang="fr">Hey  <span class="emoji">😇</span>! Je suis</span>
                         <span lang="en">Hi  <span class="emoji">😇</span>! I am</span>
@@ -29,31 +28,31 @@ export default component$(() => {
                     <div class="get-in-touch">
                         <button>Me contacter</button>
                     </div>
-                </Animate>
+                </div>
             </div>
 
             
             {/* // rectangles background */}
             <div class="background">
-                <Animate class="frame-box" animationKeys="@sc-in_child-ascend-down+++" threshold="0.4, 0.5">
+                <div class="frame-box">
                     <div class="frame"></div>
-                </Animate>
-                <Animate class="frame-box" animationKeys="@sc-in_child-ascend-down+++">
-                    <div class="frame"></div>
-                    <div class="frame"></div>
-                </Animate>
-                <Animate class="frame-box" animationKeys="@sc-in_child-ascend-down+++">
+                </div>
+                <div class="frame-box">
                     <div class="frame"></div>
                     <div class="frame"></div>
+                </div>
+                <div class="frame-box">
                     <div class="frame"></div>
-                </Animate>
-                <Animate class="frame-box" animationKeys="@sc-in_child-ascend-down+++">
                     <div class="frame"></div>
                     <div class="frame"></div>
-                </Animate>
-                <Animate class="frame-box" animationKeys="@sc-in_child-ascend-down+++" threshold="0.4, 0.5">
+                </div>
+                <div class="frame-box">
                     <div class="frame"></div>
-                </Animate>
+                    <div class="frame"></div>
+                </div>
+                <div class="frame-box">
+                    <div class="frame"></div>
+                </div>
             </div>
         </section>
     );
