@@ -14,8 +14,11 @@ export default component$(() => {
                     </ul>
                 </div>
                 <div class="language">
-                    <p>FR</p>
-                    <p>EN</p>
+                    <input type="checkbox" name="language" id="lang-switch" />
+                    <label for="lang-switch">
+                        <p>FR</p>
+                        <p>EN</p>
+                    </label>
                 </div>
             </nav>
         </header>

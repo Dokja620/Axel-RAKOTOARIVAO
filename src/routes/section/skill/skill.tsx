@@ -26,8 +26,8 @@ import { Animate } from '@dokja620/qwik-animate';
 export default component$(() => {
     return (
         <section id="skill" class="container">
-            <Animate class="tech" animationKeys="@sl-y_lv-down+_speed-down" runOnce>
-                <h2>Les technologies que j'utilise <span class="emoji">🚀</span></h2>
+            <h2 style={{textAlign: "center"}}>Les technologies que j'utilise <span class="emoji">🚀</span></h2>
+            <Animate class="tech" animationKeys="@sl-y_lv-down+_speed-down">
                 <ul>
                     <li><span><img src={html} title='html5' alt="icon html5" width={65} height={65}/></span></li>
                     <li><span><img src={css} title='css3' alt="icon css3" width={72} height={72}/></span></li>

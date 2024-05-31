@@ -7,9 +7,17 @@ export default component$(() => {
         <section id="intro" class="container">
             <div class="bio">
                 <Animate class="info" animationKeys="@sl-y!_ease-out-back_child-ascend-up_lv-down+++_delay-6 @fd"  threshold="0.2, 0.9">
-                    <h1>Hey<span class="emoji">🙂</span>! Je suis</h1>
-                    <h1>Axel RAKOTOARIVAO</h1>
-                    <h1>Développeur Front-End</h1>
+                    <h1>
+                        <span lang="fr">Hey  <span class="emoji">😇</span>! Je suis</span>
+                        <span lang="en">Hi  <span class="emoji">😇</span>! I am</span>
+                    </h1>
+                    <h1>Axel RAKOTOARIVAO,</h1>
+                    <h1>
+                        
+                        <span lang="fr">Développeur Front-End</span>
+                        <span lang="en">a Front End Developer</span>
+                        
+                    </h1>
                     <p>
                         Spécialisé dans la conception de sites web captivants, 
                         utilisant React JS, Qwik et Alpine.js. Mon objectif 

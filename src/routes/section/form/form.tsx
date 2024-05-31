@@ -13,7 +13,7 @@ import { Animate } from '@dokja620/qwik-animate';
 export default component$(() => {
     return (
         <section id="form" class="container">
-            <Animate class="contact" animationKeys="@sl-x_lv-down+++_child-ascend-up_speed-up+" threshold="0.3, 0.5" runOnce>
+            <Animate class="contact" animationKeys="@sl-x_lv-down+++_child-ascend-up_speed-up+" threshold="0.3, 0.1">
                 <h2>Laissez-moi transformer vos idées en réalité digitale! <span class="emoji">💭</span></h2>
 
                 <div class="details">
@@ -37,7 +37,7 @@ export default component$(() => {
                     <span><img src={whatsapp} alt="icon whatsapp" width={35} height={35}/></span>
                 </div>
             </Animate>
-            <Animate class="form" animationKeys="@sl-x_lv-down+++_speed-up" threshold="0.3, 0.5" runOnce>
+            <Animate class="form" animationKeys="@sl-x_lv-down+++_speed-up" threshold="0.3, 0.1">
                 <form action="">
                     <div>
                         <label for="name">Nom</label>
