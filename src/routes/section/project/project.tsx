@@ -11,7 +11,7 @@ export default component$(() => {
     return (
         <section id="project" class="container">
             <h2>Mes Projets Front-End sur GitHub <span class="emoji">✨</span></h2>
-            <Animate class="utilities" animationKeys="@sp-in_lv-down+++_child-ascend" runOnce>
+            <Animate class="utilities" animationKeys="@sp-in_lv-down+++_child-ascend">
                 <div class="tools qwik-animate">
                     <div class="title">
                         <span><img src={repo} alt="repository icon" width={25} height={25}/></span>

@@ -16,7 +16,8 @@ export default component$(() => (
         <Form/>
         {/* scroll and get to top button */}
         <div class="fixed">
-            <div class="scroll-top"></div>
+            <div class="scroll-more"></div>
+            <a href="#intro"><div class="scroll-top"></div></a>
         </div>
     </>
 ));

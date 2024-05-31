@@ -185,10 +185,20 @@ header {
   width: 100%;
   padding: 1em;
   background: hsla(0, 0%, 50%, 0.1);
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
   border-bottom: 2px solid hsla(0, 0%, 50%, 0.1);
   z-index: 5;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  z-index: -1;
 }
 
 nav {
@@ -278,6 +288,83 @@ nav * {
   cursor: pointer;
   transition: 0.25s;
   z-index: 2;
+}
+
+.burger-menu {
+  display: none;
+  position: fixed;
+  right: 1em;
+}
+
+.burger-menu input {
+  position: absolute;
+  opacity: 0;
+}
+
+.burger-menu div {
+  height: 3px;
+  width: 25px;
+  border-radius: 2px;
+  background: color-mix(in srgb, var(--mint-cream), transparent 20%);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.burger-menu label {
+  cursor: pointer;
+  position: relative;
+}
+
+.burger-menu label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25px;
+  aspect-ratio: 1/1;
+}
+
+.burger-menu label div {
+  transition: 0.25s ease-in-out;
+}
+
+.burger-menu label :nth-child(1) {
+  transform: translateY(-4px) rotate(0);
+}
+
+.burger-menu label :nth-child(2) {
+  opacity: 1;
+}
+
+.burger-menu label :nth-child(3) {
+  transform: translateY(4px) rotate(0);
+}
+
+nav:has(.burger-menu input:checked) .burger-menu label :nth-child(1) {
+  transform: translateY(3px) rotate(-45deg);
+}
+
+nav:has(.burger-menu input:checked) .burger-menu label :nth-child(2) {
+  opacity: 0;
+}
+
+nav:has(.burger-menu input:checked) .burger-menu label :nth-child(3) {
+  transform: translateY(-3px) rotate(45deg);
+}
+
+nav:has(.burger-menu input:checked) .nav-links {
+  transform: translate(12px, 52px);
+  opacity: 1;
+}
+
+nav:has(.burger-menu input:checked) .nav-links ul::after {
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+}
+
+nav:has(.burger-menu input:checked) .language {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 footer {
@@ -1091,22 +1178,21 @@ section {
   height: fit-content;
 }
 
-.scroll-top {
+.scroll-more {
   width: 25px;
   aspect-ratio: 1/1.5;
   border-radius: 1em;
   outline: 2px solid color-mix(in srgb, var(--mint-cream), transparent 50%);
   box-shadow: 0px 0px 10px var(--mint-cream);
   position: relative;
-  cursor: pointer;
 }
 
-.scroll-top:hover::before {
+.scroll-more:hover::before {
   transform: translate(45px, -50%);
   opacity: 1;
 }
 
-.scroll-top::after {
+.scroll-more::after {
   content: "";
   position: absolute;
   top: 60%;
@@ -1118,6 +1204,43 @@ section {
   background: var(--mint-cream);
   box-shadow: 0px 0px 10px var(--mint-cream);
   animation: scroll 1s linear infinite;
+}
+
+.scroll-top {
+  display: none;
+  width: 28px;
+  aspect-ratio: 1/1;
+  border-radius: 1em;
+  outline: 2px solid color-mix(in srgb, var(--mint-cream), transparent 50%);
+  box-shadow: 0px 0px 10px var(--mint-cream);
+  position: relative;
+  cursor: pointer;
+}
+
+.scroll-top::before {
+  content: "";
+  position: absolute;
+  top: 45%;
+  left: calc(50% - 3px);
+  transform: translate(-40%, -50%) rotate(45deg);
+  height: 12px;
+  width: 3px;
+  border-radius: 2px;
+  background: var(--mint-cream);
+  box-shadow: 0px 0px 10px var(--mint-cream);
+}
+
+.scroll-top::after {
+  content: "";
+  position: absolute;
+  top: 45%;
+  left: calc(50% + 3px);
+  transform: translate(-40%, -50%) rotate(-45deg);
+  height: 12px;
+  width: 3px;
+  border-radius: 2px;
+  background: var(--mint-cream);
+  box-shadow: 0px 0px 10px var(--mint-cream);
 }
 
 @keyframes go-to-top {
@@ -1177,7 +1300,51 @@ section {
   }
 
   header {
-    display: none;
+    padding: 1em 0;
+  }
+
+  header .nav-links {
+    opacity: 0;
+    transform: translate(62px, 52px);
+    height: 20px;
+    transition: 0.25s ease-in-out;
+  }
+
+  header .nav-links ul {
+    position: relative;
+    display: grid;
+    gap: 1em;
+    padding: 1em 1.75em 68px 1.75em;
+    border-radius: 1em;
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid hsla(0, 0%, 50%, 0.1);
+    z-index: inherit;
+  }
+
+  header .nav-links ul::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-backdrop-filter: blur(0px);
+    backdrop-filter: blur(0px);
+    z-index: -1;
+    transition: 2s ease-in-out;
+  }
+
+  header .language {
+    position: absolute;
+    top: 240px;
+    right: 75px;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: 0.25s ease-in-out 0.15s;
+  }
+
+  header .burger-menu {
+    display: block;
   }
 
   .container {

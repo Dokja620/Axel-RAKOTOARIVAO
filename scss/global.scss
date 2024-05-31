@@ -114,14 +114,14 @@ section {
     height: fit-content;
 }
 
-.scroll-top{
+.scroll-more{
     width: 25px;
     aspect-ratio: 1/1.5;
     border-radius: $spacing;
     outline: 2px solid color-mix(in srgb, var(--mint-cream), transparent 50%);
     box-shadow: 0px 0px 10px var(--mint-cream);
     position: relative;
-    cursor: pointer;
+    // cursor: pointer;
     &:hover::before{
         transform: translate(45px, -50%);
         opacity: 1;
@@ -137,36 +137,42 @@ section {
         border-radius: 2px;
         background: var(--mint-cream);
         box-shadow: 0px 0px 10px var(--mint-cream);
-        animation: scroll 1s linear infinite;;
+        animation: scroll 1s linear infinite;
     }
-    // &::before{
-    //     content: 'scroll pour en voir plus';
-    //     position: absolute;
-    //     width: max-content;
-    //     font-weight: 200;
-    //     left: 0;
-    //     top: 50%;
-    //     transform: translate(30px, -50%);
-    //     opacity: 0;
-    //     transform-origin: left;
-    //     transition: transform .25s ease-in-out, opacity .15s ease-in-out;
-    // }
-    // &:hover{
-    //     outline: none;
-    //     // box-shadow: none;
-    //     &::after{
-    //         content: '';
-    //         position: absolute;
-    //         top: 0;
-    //         left: 5px;
-    //         width: 150px;
-    //         aspect-ratio: 1/1;
-    //         border-top: 2px solid var(--mint-cream);
-    //         border-right: 2px solid var(--mint-cream);
-    //         transform: rotate(315deg);
-    //         animation: go-to-top 1.25s linear infinite;
-    //     }
-    // }
+}
+.scroll-top{
+    display: none;
+    width: 28px;
+    aspect-ratio: 1/1;
+    border-radius: $spacing;
+    outline: 2px solid color-mix(in srgb, var(--mint-cream), transparent 50%);
+    box-shadow: 0px 0px 10px var(--mint-cream);
+    position: relative;
+    cursor: pointer;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 45%;
+        left: calc(50% - 3px);
+        transform: translate(-40%, -50%) rotate(45deg);
+        height: 12px;
+        width: 3px;
+        border-radius: 2px;
+        background: var(--mint-cream);
+        box-shadow: 0px 0px 10px var(--mint-cream);
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        top: 45%;
+        left: calc(50% + 3px);
+        transform: translate(-40%, -50%) rotate(-45deg);
+        height: 12px;
+        width: 3px;
+        border-radius: 2px;
+        background: var(--mint-cream);
+        box-shadow: 0px 0px 10px var(--mint-cream);
+    }
 }
 
 @keyframes go-to-top {
