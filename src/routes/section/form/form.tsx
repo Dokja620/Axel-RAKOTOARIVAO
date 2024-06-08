@@ -7,13 +7,17 @@ import whatsapp from '/public/media/social/whatsapp.svg';
 import mail from '/public/media/social/mail.svg';
 import phone from '/public/media/social/phone.svg';
 import location from '/public/media/social/location.svg';
+
+// Fluent emoji
+import thought from '/public/media/fluent/thought_balloon_flat.svg';
+
 // Fith section | wanna talk ?
 
 export default component$(() => {
     return (
         <section id="form" class="container">
             <div class="contact">
-                <h2>Laissez-moi transformer vos idées en réalité digitale! <span class="emoji">💭</span></h2>
+                <h2>Laissez-moi transformer vos idées en réalité digitale! <span class="emoji"><img src={thought} alt="sparkles face fluent emoji icon" width={50} height={50}/></span></h2>
 
                 <div class="details">
                     <div>
@@ -31,9 +35,9 @@ export default component$(() => {
                 </div>
 
                 <div class="social-media">
-                    <span><img src={github} alt="icon github" width={35} height={35}/></span>
-                    <span><img src={linkedin} alt="icon linkedin" width={35} height={35}/></span>
-                    <span><img src={whatsapp} alt="icon whatsapp" width={35} height={35}/></span>
+                    <a href="https://github.com/Dokja620" target="_blank"><img src={github} alt="icon github" width={35} height={35}/></a>
+                    <a href="https://www.linkedin.com/in/diary-axel-rakotoarivao-356532268/" target="_blank"><img src={linkedin} alt="icon linkedin" width={35} height={35}/></a>
+                    <a href="https://api.whatsapp.com/send?phone=261334144813" target="_blank"><img src={whatsapp} alt="icon whatsapp" width={35} height={35}/></a>
                 </div>
             </div>
             <div class="form">

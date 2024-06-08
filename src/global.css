@@ -150,6 +150,15 @@ small {
   /* 12.8px */
 }
 
+.emoji {
+  margin-right: 4px;
+}
+
+.emoji img {
+  position: relative;
+  top: 8px;
+}
+
 span[lang] {
   font-weight: inherit;
   animation: fadeIguess 0.7s ease-in-out forwards;
@@ -201,6 +210,10 @@ header::after {
   z-index: -1;
 }
 
+header * {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -210,6 +223,19 @@ nav {
 
 nav * {
   font-weight: 100;
+}
+
+.logo {
+  position: relative;
+  padding-left: 10px;
+}
+
+.logo::after {
+  content: url("/public/media/fluent/beaming_face_with_smiling_eyes_flat.svg");
+  transform: scale(0.6);
+  position: absolute;
+  left: -18px;
+  top: -7px;
 }
 
 .nav-links ul {
@@ -556,37 +582,6 @@ footer {
   text-shadow: 0px 0px 4px #000;
 }
 
-.skill:hover span {
-  opacity: 0.2;
-}
-
-.skill:hover span.users {
-  scale: 3.2;
-}
-
-.skill:hover span.bolt {
-  scale: 3.2;
-}
-
-.skill:hover span.access {
-  scale: 2.4;
-}
-
-.skill:hover span.test {
-  top: 4px;
-  scale: 2.4;
-}
-
-.skill:hover span.team {
-  top: 20px;
-  scale: 2.6;
-}
-
-.skill:hover span.puzzle {
-  top: 10px;
-  scale: 2.2;
-}
-
 .skill span {
   position: absolute;
   top: -8px;
@@ -924,6 +919,10 @@ footer {
   flex-grow: 1;
 }
 
+.contact .details * {
+  font-weight: 400;
+}
+
 .contact .details > div {
   margin: 2em 0;
   display: flex;
@@ -941,27 +940,31 @@ footer {
   gap: 2em;
 }
 
-.contact .social-media span {
+.contact .social-media * {
+  font-weight: 400;
+}
+
+.contact .social-media a {
   cursor: pointer;
   position: relative;
   width: 50px;
   height: 40px;
 }
 
-.contact .social-media span:nth-child(1) {
+.contact .social-media a:nth-child(1) {
   transition: 0.35s width ease-in-out 0.25s;
 }
 
-.contact .social-media span:nth-child(1):hover {
+.contact .social-media a:nth-child(1):hover {
   width: 80px;
 }
 
-.contact .social-media span:nth-child(1):hover::after {
+.contact .social-media a:nth-child(1):hover::after {
   opacity: 1;
   transform: translateX(0);
 }
 
-.contact .social-media span:nth-child(1)::after {
+.contact .social-media a:nth-child(1)::after {
   position: absolute;
   content: "GitHub";
   top: 8px;
@@ -974,20 +977,20 @@ footer {
   transition-delay: 0.25s;
 }
 
-.contact .social-media span:nth-child(2) {
+.contact .social-media a:nth-child(2) {
   transition: 0.35s width ease-in-out 0.15s;
 }
 
-.contact .social-media span:nth-child(2):hover {
+.contact .social-media a:nth-child(2):hover {
   width: 90px;
 }
 
-.contact .social-media span:nth-child(2):hover::after {
+.contact .social-media a:nth-child(2):hover::after {
   opacity: 1;
   transform: translateX(0);
 }
 
-.contact .social-media span:nth-child(2)::after {
+.contact .social-media a:nth-child(2)::after {
   position: absolute;
   content: "Linkedin";
   top: 8px;
@@ -1000,16 +1003,16 @@ footer {
   transition-delay: 0.25s;
 }
 
-.contact .social-media span:nth-child(3) {
+.contact .social-media a:nth-child(3) {
   transition: 0.35s width ease-in-out 0.15s;
 }
 
-.contact .social-media span:nth-child(3):hover::after {
+.contact .social-media a:nth-child(3):hover::after {
   opacity: 1;
   transform: translateX(0);
 }
 
-.contact .social-media span:nth-child(3)::after {
+.contact .social-media a:nth-child(3)::after {
   position: absolute;
   content: "Whatsapp";
   top: 8px;
@@ -1461,6 +1464,12 @@ section {
     font-size: 2rem;
   }
 
+  .emoji img {
+    top: 8px;
+    width: 40px;
+    aspect-ratio: 1/1;
+  }
+
   .container {
     max-width: 475px;
   }
@@ -1516,6 +1525,12 @@ section {
 
   h4 {
     font-size: 1.3rem;
+  }
+
+  .emoji img {
+    top: 14px;
+    width: 30px;
+    aspect-ratio: 1/1;
   }
 
   footer {

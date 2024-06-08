@@ -1,4 +1,5 @@
 import { component$ } from '@builder.io/qwik';
+import beaming from "/media/fluent/slightly_smiling_face_flat.svg";
 // First section | Introducing Axel
 
 export default component$(() => {
@@ -7,8 +8,8 @@ export default component$(() => {
             <div class="bio">
                 <div class="info">
                     <h1>
-                        <span lang="fr">Hey  <span class="emoji">😇</span>! Je suis</span>
-                        <span lang="en">Hi  <span class="emoji">😇</span>! I am</span>
+                        <span lang="fr">Hey <span class="emoji"><img src={beaming} alt="beaming face fluent emoji icon" height={50} width={50}/></span>! Je suis</span>
+                        <span lang="en">Hi <span class="emoji"><img src={beaming} alt="beaming face fluent emoji icon" height={50} width={50}/></span>! I am</span>
                     </h1>
                     <h1>Axel RAKOTOARIVAO,</h1>
                     <h1>

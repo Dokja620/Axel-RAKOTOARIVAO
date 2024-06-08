@@ -20,12 +20,16 @@ import postcss from '/public/media/techs/logos--postcss.svg';
 import sass from '/public/media/techs/logos--sass.svg';
 import git from '/public/media/techs/logos--git.svg';
 
+// Fluent emoji
+import space from '/public/media/fluent/rocket_flat.svg';
+import eyes from '/public/media/fluent/eyes_flat.svg';
+
 // Second section | What do I do ?
 
 export default component$(() => {
     return (
         <section id="skill" class="container">
-            <h2 style={{textAlign: "center"}}>Les technologies que j'utilise <span class="emoji">🚀</span></h2>
+            <h2 style={{textAlign: "center"}}>Les technologies que j'utilise <span class="emoji"><img src={space} alt="space ship fluent emoji icon" width={50} height={50}/></span></h2>
             <div class="tech">
                 <ul>
                     <li><span><img src={html} title='html5' alt="icon html5" width={65} height={65}/></span></li>
@@ -42,7 +46,7 @@ export default component$(() => {
                 </ul>
             </div>
             <div class="do">
-                <h2>Ce que je fais ?👀</h2>
+                <h2>Ce que je fais ? <span class="emoji"><img src={eyes} alt="eyes fluent emoji icon" width={50} height={50}/></span></h2>
                 <p>Je crée des interfaces réactives pour une expérience utilisateur intuitive et fluide.</p>
                 <div class="list">
                     <div class="skill">

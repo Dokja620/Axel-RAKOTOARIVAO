@@ -43,6 +43,9 @@
     gap: $spacing-xxl;
     flex-grow: 1;
     .details{
+        *{
+            font-weight: 400;
+        }
         > div{
             margin: $spacing-xl 0;
             display: flex;
@@ -57,7 +60,10 @@
     .social-media{
         display: flex;
         gap: $spacing-xl;
-        span{
+        *{
+            font-weight: 400;
+        }
+        a{
             cursor: pointer;
             position: relative;
             width: 50px;

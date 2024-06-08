@@ -58,6 +58,9 @@ header{
             display: block;
         }
     }
+    *{
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    }
 }
 nav{
     display: flex;
@@ -66,6 +69,18 @@ nav{
     padding: 2px $spacing-md;
     *{
         font-weight: 100;
+    }
+}
+
+.logo{
+    position: relative;
+    padding-left: 10px;
+    &::after{
+        content: url('/public/media/fluent/beaming_face_with_smiling_eyes_flat.svg');
+        transform: scale(.6);
+        position: absolute;
+        left: -18px;
+        top: -7px;
     }
 }
 

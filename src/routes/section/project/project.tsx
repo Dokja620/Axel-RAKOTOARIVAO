@@ -4,12 +4,15 @@ import repo from '/public/media/repo.svg';
 import star from '/public/media/star.svg';
 import fork from '/public/media/fork.svg';
 
+// Fluent emoji
+import sparkles from '/public/media/fluent/sparkles_flat.svg';
+
 // Third section | What I have done so far ?
 
 export default component$(() => {
     return (
         <section id="project" class="container">
-            <h2>Mes Projets Front-End sur GitHub <span class="emoji">✨</span></h2>
+            <h2>Mes Projets Front-End sur GitHub <span class="emoji"><img src={sparkles} alt="sparkles face fluent emoji icon" width={50} height={50}/></span></h2>
             <div class="utilities">
                 <div class="tools qwik-animate">
                     <div class="title">

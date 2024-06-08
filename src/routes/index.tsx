@@ -6,11 +6,14 @@ import Website from "./section/website/website";
 import Form from "./section/form/form";
 import Project from "./section/project/project";
 
+// Fluent emoji
+import palette from "/media/fluent/artist_palette_flat.svg";
+
 export default component$(() => (
     <>
         <Intro/>
         <Skill/>
-        <h2 class="web-creation container">Mes créations digitales dans le domaine du web <span class="emoji">🎨</span></h2>
+        <h2 class="web-creation container">Mes créations digitales dans le domaine du web <span class="emoji"><img src={palette} alt="" width={50} height={50}/></span></h2>
         <Website/>
         <Project/>
         <Form/>
