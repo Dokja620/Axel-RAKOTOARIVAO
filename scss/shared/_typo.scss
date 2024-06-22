@@ -131,3 +131,25 @@ small {
     font-size: 0.800rem;
     /* 12.8px */
 }
+
+.emoji{
+    margin-right: 4px;
+    img{
+        position: relative;
+        top: 8px;
+    }
+    @media (max-width: $breakpoint-sm) {
+        img{
+            top: 8px;
+            width: 40px;
+            aspect-ratio: 1/1;
+        }
+    }
+    @media (max-width: $breakpoint-xs) {
+        img{
+            top: 14px;
+            width: 30px;
+            aspect-ratio: 1/1;
+        }
+    }
+}

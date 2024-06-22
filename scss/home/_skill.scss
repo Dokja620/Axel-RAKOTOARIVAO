@@ -104,32 +104,32 @@
     p{
         text-shadow: 0px 0px 4px #000;
     }
-    &:hover{
-        span{
-            opacity: .2;
-            &.users{
-                scale: 3.2;
-            }
-            &.bolt{
-                scale: 3.2;
-            }
-            &.access{
-                scale: 2.4;
-            }
-            &.test{
-                top: 4px;
-                scale: 2.4;
-            }
-            &.team{
-                top: 20px;
-                scale: 2.6;
-            }
-            &.puzzle{
-                top: 10px;
-                scale: 2.2;
-            }
-        }
-    }
+    // &:hover{
+    //     span{
+    //         opacity: .2;
+    //         &.users{
+    //             scale: 3.2;
+    //         }
+    //         &.bolt{
+    //             scale: 3.2;
+    //         }
+    //         &.access{
+    //             scale: 2.4;
+    //         }
+    //         &.test{
+    //             top: 4px;
+    //             scale: 2.4;
+    //         }
+    //         &.team{
+    //             top: 20px;
+    //             scale: 2.6;
+    //         }
+    //         &.puzzle{
+    //             top: 10px;
+    //             scale: 2.2;
+    //         }
+    //     }
+    // }
     span{
         position: absolute;
         top: -8px;

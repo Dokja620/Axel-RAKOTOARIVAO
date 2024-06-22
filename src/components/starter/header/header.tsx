@@ -4,7 +4,7 @@ export default component$(() => {
     return (
         <header>
             <nav>
-                <div class="logo"><a href="#intro">Bienvenue</a></div>
+                <div class="logo"><a href="#intro">Bienvenue !</a></div>
                 <div class="nav-links">
                     <ul>
                         <li><a href="#skill">Compétence</a></li>

@@ -1,230 +1,136 @@
-// TODO it bugs, few lags when switching
-.web-creation{
-    text-align: center;
-    margin-top: 12%;
-    @media (max-width: $breakpoint-md) {
-        padding: 0 $spacing;
-    }
-}
 #website{
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-.slider{
-    background: rgba(255, 255, 255, 0.1);
-    inset: 80px 200px 80px 80px;
-    position: absolute;
-    border-radius: $spacing-md;
-    
-}
-.slides{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 240px;
-    height: 320px;
-    border-radius: $spacing-md;
-    box-shadow: 0 25px 50px hsla(0, 0%, 0%, 0.5);
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    
-    transition: .5s;
-    &.malala{
-        background: url('/public/media/bg-proj/malala.webp') center;
-        > .slide-description{
-            background: hsla(162, 94%, 31%, 0.2);
-        }
-    }
-    &.vacances{
-        background: url('/public/media/bg-proj/tour.webp') center;
-        > .slide-description{
-            background: hsla(32, 6%, 45%, 0.452);
-        }
-    }
-    &.batman{
-        background: url('/public/media/bg-proj/bat.webp') center;
-        > .slide-description{
-            background: rgba(0, 0, 0, 0.3);
-            // border: 1px solid rgba(255, 255, 255, 0.1);
-            border-top: 2px solid rgba(255, 255, 255, 0.1);
-            border-right: 2px solid rgba(255, 255, 255, 0.1);
-        }
-    }
-    &.panther{
-        background: url('/public/media/bg-proj/pant.webp') center;
-        > .slide-description{
-            background: hsla(224,92%,46%, .3);
-            // border: 1px solid rgba(255, 255, 255, 0.1);
-            border-top: 2px solid rgba(255, 255, 255, 0.1);
-            border-right: 2px solid rgba(255, 255, 255, 0.1);
-        }
-    }
-    &.superman{
-        background: url('/public/media/bg-proj/sup.webp') center;
-        > .slide-description{
-            background: hsla(0, 100%, 29%, 0.2);
-            // border: 1px solid rgba(255, 255, 255, 0.1);
-            border-top: 2px solid rgba(255, 255, 255, 0.1);
-            border-right: 2px solid rgba(255, 255, 255, 0.1);
-        }
-    }
-
-    // slides active
-    &:nth-child(1),
-    &:nth-child(2){
-        top: 0;
-        left: 0;
-        transform: translateY(0);
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        box-shadow: 0 25px 50px color-mix(in srgb, var(--dark-black), transparent 50%);
-        .slide-description{
-            opacity: 1;
-            transform: translateY(0);
-            transition-delay: .5s;
-            h2{
-                text-shadow: 0px 2px 4px color-mix(in srgb, var(--dark-black), transparent 50%), 0px 2px 16px color-mix(in srgb, var(--dark-black), transparent 50%);
-            }
-            p{
-                text-shadow: 0px 2px 8px var(--dark-black), 0px 2px 16px var(--dark-black), 0px 2px 20px var(--dark-black);
-            }
-        }
-    }
-    &:nth-child(1){
-        box-shadow: 0 25px 50px hsla(0, 0%, 0%, 0);
-    }
-    &:nth-child(3){
-        left: calc(50% + 240px);
-        background-size: cover;
-    }
-    &:nth-child(4){
-        left: calc(50% + 500px);
-        background-size: cover;
-    }
-    &:nth-child(5){
-        left: calc(50% + 760px);
-        background-size: cover;
-    }
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    margin: 10% 0;
 }
 
-.slider-buttons{
-    position: absolute;
-    display: flex;
-    bottom: 15px;
-    gap: $spacing-md;
-    span{
-        position: relative;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        border: 2px solid var(--mint-cream);
-        cursor: pointer;
-        overflow: hidden;
-        transition: transform .25s ease-in-out;
-        &::before{
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 15px;
-            height: 15px;
-            border-top: 4px solid var(--mint-cream);
-            border-left: 4px solid var(--mint-cream);
-            transform: translate(-50%, -50%) rotate(315deg);
-        }
-        &:hover{
-            transform: scale(110%);
-        }
-        &:nth-child(2)::before{
-            transform: translate(-50%, -50%) rotate(135deg);
-        }
-    }
-}
-
-.slide-description{
-    position: relative;
+.preview{
+    max-width: 1280px;
+    width: 80vw;
+    min-width: 300px;
+    // width: 90%;
+    margin: 0 auto;
+    height: 80vh;
+    background: red;
+    border-radius: $spacing-lg;
     padding: $spacing-lg;
-    max-width: 600px;
-    transition: .25s;
-    transition-delay: 0;
-    opacity: 0;
-    transform: translateY(40px);
-    background: hsla(224,92%,46%, .3);
-    border-radius: 0 $spacing-lg 0 $spacing;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    border-top: 2px solid rgba(255, 255, 255, 0.2);
-    border-right: 2px solid rgba(255, 255, 255, 0.2);
-    padding: $spacing;
-    @media (max-width: $breakpoint-md) {
-        border-radius: 0 0 $spacing-md $spacing-md;
-    }
-}
-.slide-links{
-    margin: $spacing-lg 0 0;
     display: flex;
-    gap: 6px;
-    > :nth-child(1){
-        border-radius: $spacing-lg 8px 8px $spacing-lg;
-        padding: 8px $spacing 8px $spacing-lg;
-    }
-    :nth-child(2){
-        border-radius: 8px $spacing-lg $spacing-lg 8px;
-        padding: 4px 8px 4px 12px;
+    align-items: flex-end;
+    position: relative;
+    .title{
+        margin: 0 0 $spacing;
+        h2{
+            text-shadow: #000 0px 0px 5px, #000 0px 0px 20px;
+        }
+        p{
+            text-shadow: #000 0px 0px 2px, #000 0px 0px 6px, #000 0px 0px 10px;
+            font-weight: 400;
+        }
         span{
-            position: relative;
-            top: 1px;
-            opacity: .7;
+            color: var(--celestial-blue);
         }
-        img{
-            scale: 1.1;
-        }
+    }
+    .description p{
+        background: color-mix(in srgb, var(--dark-black), transparent 50%);
+        padding: $spacing-xs;
+        border-radius: $spacing;
+    }
+    .links{
+        margin: $spacing 0 0; 
+        display: flex;
+        gap: $spacing;
     }
     a{
-        border: 2px solid color-mix(in srgb, white, transparent 50%);
-        font-size: 1rem;
-        box-shadow: 0px 4px 12px color-mix(in srgb, var(--dark-black), transparent 50%);
+        font-weight: 100;
+        background: color-mix(in srgb, var(--dark-black), transparent 50%);
+        padding: 8px 42px 8px 16px;
+        border: 2px solid var(--lavender-web);
+        border-radius: $spacing-lg;
+        position: relative;
+        span{
+            position: absolute;
+            top: 8px;
+            right: 12px;
+        }
     }
-    .p{
-        text-transform: uppercase;
-        font-weight: 500;
-        opacity: .8;
+    p{
+        width: 40%;
+        min-width: 275px;
     }
 }
 
-// responsive
-@media (max-width: $breakpoint-lg) {
-    .slider{
-        inset: 40px 40px 200px 40px;
+.navigate{
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+    background: hsla(250,100%,38%,1);
+    padding: 16px 24px;
+    border-radius: $spacing 0 0 $spacing;
+    display: flex;
+    gap: $spacing-lg;
+    z-index: 2;
+    button{
+        width: 20px;
+        aspect-ratio: 1/1;
+        border-top: 5px solid white;
+        border-right: 5px solid white;
+        border-bottom: none;
+        border-left: none;
+        background: none;
+        transform: rotate(45deg);
+        cursor: pointer;
+        &.prev{
+            border-right: none;
+            border-left: 5px solid white;
+            transform: rotate(-45deg);
+        }
     }
-    .slides{
-        width: 100px;
-        height: 100px;
-        bottom: -170px;
-        top: initial;
-        box-shadow: 0 10px 20px hsla(0, 0%, 0%, 0.5);
-        &:nth-child(1),
-        &:nth-child(2){
-            top: initial;
-            bottom: 0;
-        }
-        &:nth-child(3){
-            left: 0;
-        }
-        &:nth-child(4){
-            left: 120px;
-        }
-        &:nth-child(5){
-            left: 240px;
-        }
+}
+
+// Step switching
+[active-step="1"]> div [current-step="1"],
+[active-step="2"]> div [current-step="2"],
+[active-step="3"]> div [current-step="3"],
+[active-step="4"]> div [current-step="4"],
+[active-step="5"]> div [current-step="5"] {
+    display: block;
+}
+[current-step]{
+    display: none;
+}
+
+// Background changes
+.preview{
+    transition: .25s all ease;
+    position: relative;
+    overflow: hidden;
+    &::after{
+        top: 0;
+        left: 0;
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: hsla(0, 0%, 0%, 0);
+        z-index: 1;
     }
+    .content{
+        z-index: 2;
+    }
+}
+[active-step="1"] .preview{
+    background: #000 url('/public/media/bg-proj/malala.webp') top center/cover no-repeat;
+}
+[active-step="2"] .preview{
+    background: #000 url('/public/media/bg-proj/tour.webp') 70% 20%/cover no-repeat;
+}
+[active-step="3"] .preview{
+    background: #000 url('/public/media/bg-proj/bat.webp') right/cover no-repeat;
+}
+[active-step="4"] .preview{
+    background: #000 url('/public/media/bg-proj/pant.webp') left/cover no-repeat;
+}
+[active-step="5"] .preview{
+    background: #000 url('/public/media/bg-proj/sup.webp') center/cover no-repeat;
 }
