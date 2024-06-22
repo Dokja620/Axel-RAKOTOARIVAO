@@ -1,5 +1,5 @@
 import { component$ } from '@builder.io/qwik';
-import beaming from "/media/fluent/slightly_smiling_face_flat.svg";
+import beaming from "/public/media/fluent/slightly_smiling_face_flat.svg";
 import { Animate } from '~/components/qwik-animate/animate';
 // First section | Introducing Axel
 

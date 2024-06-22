@@ -1,6 +1,6 @@
 import { component$, useStore, $ } from '@builder.io/qwik';
-import link from "/media/link.svg";
-import github from "/media/social/github.svg";
+import link from "/public/media/link.svg";
+import github from "/public/media/social/github.svg";
 
 export default component$(() => {
     const state = useStore({ activeStep: 1 });
