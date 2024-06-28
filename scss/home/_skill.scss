@@ -4,6 +4,9 @@
     @media (max-width: $breakpoint-md) {
         padding: $spacing-2xl $spacing;
     }
+    @media (max-width: $breakpoint-xs) {
+        padding: 0 25px;
+    }
 }
 .tech{
     h2{

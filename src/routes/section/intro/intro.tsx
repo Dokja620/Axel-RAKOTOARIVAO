@@ -20,15 +20,27 @@ export default component$(() => {
                         
                     </h1>
                     <p>
-                        Spécialisé dans la conception de sites web captivants, 
-                        utilisant React JS, Qwik et Alpine.js. Mon objectif 
-                        principal est de créer des expériences utilisateur 
-                        fluides et des interfaces intuitives. Chaque projet 
-                        que je réalise vise à élever les normes d'engagement 
-                        et de qualité.
+                        <span lang="fr">
+                            Spécialisé dans la conception de sites web captivants, 
+                            utilisant React JS, Qwik et Alpine.js. Mon objectif 
+                            principal est de créer des expériences utilisateur 
+                            fluides et des interfaces intuitives. Chaque projet 
+                            que je réalise vise à élever les normes d'engagement 
+                            et de qualité.
+                        </span>
+                        <span lang="en">
+                            Specializing in designing captivating websites using 
+                            React JS, Qwik, and Alpine.js, my primary goal is to 
+                            create seamless user experiences and intuitive interfaces. 
+                            Each project I undertake aims to elevate the standards 
+                            of engagement and quality.
+                        </span>
                     </p>
                     <div class="get-in-touch">
-                        <button>Me contacter</button>
+                        <button>
+                            <span lang="fr">Me contacter</span>
+                            <span lang="en">Reach me</span>
+                        </button>
                     </div>
                 </Animate>
             </div>
