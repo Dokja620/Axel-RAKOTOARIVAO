@@ -129,9 +129,6 @@ nav{
         display: flex;
         gap: $spacing;
         position: relative;
-        &::before{
-
-        }
         &::after{
             content: '';
             position: absolute;
@@ -161,6 +158,7 @@ nav{
     display: none;
     position: fixed;
     right: $spacing;
+    z-index: 5;
     input{
         position: absolute;
         opacity: 0;

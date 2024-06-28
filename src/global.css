@@ -320,6 +320,7 @@ nav * {
   display: none;
   position: fixed;
   right: 1em;
+  z-index: 5;
 }
 
 .burger-menu input {
