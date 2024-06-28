@@ -238,6 +238,10 @@ nav * {
   top: -7px;
 }
 
+.nav-links {
+  z-index: 5;
+}
+
 .nav-links ul {
   display: flex;
   gap: 2em;
@@ -274,6 +278,7 @@ nav * {
 .language {
   position: relative;
   display: flex;
+  z-index: 5;
 }
 
 .language input {
@@ -320,7 +325,6 @@ nav * {
   display: none;
   position: fixed;
   right: 1em;
-  z-index: 5;
 }
 
 .burger-menu input {
@@ -339,6 +343,17 @@ nav * {
 .burger-menu label {
   cursor: pointer;
   position: relative;
+}
+
+.burger-menu label::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  display: none;
 }
 
 .burger-menu label::after {
@@ -392,6 +407,10 @@ nav:has(.burger-menu input:checked) .nav-links ul::after {
 nav:has(.burger-menu input:checked) .language {
   transform: translateX(0);
   opacity: 1;
+}
+
+nav:has(.burger-menu input:checked) .burger-menu label::before {
+  display: block;
 }
 
 footer {
@@ -1436,6 +1455,14 @@ section {
 
   .container {
     width: 100%;
+  }
+
+  .bio {
+    padding: 0 25px;
+  }
+
+  #skill {
+    padding: 0 25px;
   }
 
   .tech ul {

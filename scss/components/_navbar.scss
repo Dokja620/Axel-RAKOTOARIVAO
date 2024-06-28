@@ -84,6 +84,9 @@ nav{
     }
 }
 
+.nav-links{
+    z-index: 5;
+}
 .nav-links ul{
     display: flex;
     gap: $spacing-xl;
@@ -116,6 +119,7 @@ nav{
 .language{
     position: relative;
     display: flex;
+    z-index: 5;
     input{
         position: absolute;
         top: 0;
@@ -158,7 +162,6 @@ nav{
     display: none;
     position: fixed;
     right: $spacing;
-    z-index: 5;
     input{
         position: absolute;
         opacity: 0;
@@ -173,6 +176,16 @@ nav{
     label{
         cursor: pointer;
         position: relative;
+        &::before{
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            display: none;
+        }
         &::after{
             content: '';
             position: absolute;
@@ -220,5 +233,8 @@ nav:has(.burger-menu input:checked){
     .language{
         transform: translateX(0);
         opacity: 1;
+    }
+    .burger-menu label::before{
+        display: block;
     }
 }

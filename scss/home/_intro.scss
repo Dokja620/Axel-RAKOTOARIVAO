@@ -21,7 +21,9 @@
 
 .bio {
     display: flex;
-
+    @media (max-width: $breakpoint-xs) {
+        padding: 0 25px;
+    }
     .info {
         max-width: 600px;
         @media (min-width: $breakpoint-lg) {
