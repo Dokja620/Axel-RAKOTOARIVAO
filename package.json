@@ -26,7 +26,9 @@
     "preview": "qwik build preview && vite preview --open",
     "serve": "wrangler pages dev ./dist --compatibility-flags=nodejs_als",
     "start": "vite --open --host --mode ssr",
-    "qwik": "qwik"
+    "qwik": "qwik",
+    "sass": "bun sass.js",
+    "sass:watch": "bun sass.js --watch"
   },
   "devDependencies": {
     "@builder.io/qwik": "^1.5.2",
@@ -46,12 +48,13 @@
   },
   "dependencies": {
     "@dokja620/qwik-animate": "^1.0.0",
-    "autoprefixer": "^10.4.19",
+    "autoprefixer": "^10.4.20",
     "gulp": "^5.0.0",
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-postcss": "^10.0.0",
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
+    "postcss": "^8.4.49",
     "sass": "^1.75.0"
   }
 }
