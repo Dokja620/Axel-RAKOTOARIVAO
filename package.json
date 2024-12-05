@@ -48,6 +48,8 @@
   },
   "dependencies": {
     "@dokja620/qwik-animate": "^1.0.0",
+    "@fontsource-variable/inter": "^5.1.0",
+    "@qwikest/icons": "^0.0.13",
     "autoprefixer": "^10.4.20",
     "gulp": "^5.0.0",
     "gulp-group-css-media-queries": "^1.2.2",

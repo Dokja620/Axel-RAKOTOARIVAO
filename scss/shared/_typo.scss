@@ -1,53 +1,9 @@
-@font-face {
-    font-display: swap;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 200;
-    src: url('/fonts/inter/inter-v13-latin_latin-ext-200.woff2') format('woff2');
-}
+@use './var';
 
-@font-face {
-    font-display: swap;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 300;
-    src: url('/fonts/inter/inter-v13-latin_latin-ext-300.woff2') format('woff2');
-}
-
-@font-face {
-    font-display: swap;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    src: url('/fonts/inter/inter-v13-latin_latin-ext-500.woff2') format('woff2');
-}
-
-@font-face {
-    font-display: swap;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 600;
-    src: url('/fonts/inter/inter-v13-latin_latin-ext-600.woff2') format('woff2');
-}
-@font-face {
-    font-display: swap;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    src: url('/fonts/inter/inter-v13-latin_latin-ext-700.woff2') format('woff2');
-}
-@font-face {
-    font-display: swap;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 800;
-    src: url('/fonts/inter/inter-v13-latin_latin-ext-800.woff2') format('woff2');
-}
 
 body,
 button {
-    font-family: 'Inter';
-    font-weight: 200;
+    font-family: 'Inter Variable', sans-serif;
 }
 
 h1,
@@ -55,7 +11,6 @@ h2,
 h3,
 h4,
 h5 {
-    font-family: 'Inter';
     font-weight: 700;
     letter-spacing: -1%;
 }
@@ -74,15 +29,15 @@ h1 {
     font-size: 3.053rem;
 
     /* 48.8px */
-    @media (max-width: $breakpoint-md) {
+    @media (max-width: var.$breakpoint-md) {
         font-size: 2.5rem;
     }
 
-    @media (max-width: $breakpoint-sm) {
+    @media (max-width: var.$breakpoint-sm) {
         font-size: 2.3rem;
     }
 
-    @media (max-width: $breakpoint-xs) {
+    @media (max-width: var.$breakpoint-xs) {
         font-size: 1.7rem;
     }
 }
@@ -91,15 +46,15 @@ h2 {
     font-size: 2.442rem;
 
     /* 39.04px */
-    @media (max-width: $breakpoint-md) {
+    @media (max-width: var.$breakpoint-md) {
         font-size: 2.2rem;
     }
 
-    @media (max-width: $breakpoint-sm) {
+    @media (max-width: var.$breakpoint-sm) {
         font-size: 2rem;
     }
 
-    @media (max-width: $breakpoint-xs) {
+    @media (max-width: var.$breakpoint-xs) {
         font-size: 1.5rem;
     }
 }
@@ -113,11 +68,11 @@ h4 {
     font-size: 1.563rem;
 
     /* 24.96px */
-    @media (max-width: $breakpoint-lg) {
+    @media (max-width: var.$breakpoint-lg) {
         font-size: 1.4rem;
     }
 
-    @media (max-width: $breakpoint-xs) {
+    @media (max-width: var.$breakpoint-xs) {
         font-size: 1.3rem;
     }
 }
@@ -138,14 +93,14 @@ small {
         position: relative;
         top: 8px;
     }
-    @media (max-width: $breakpoint-sm) {
+    @media (max-width: var.$breakpoint-sm) {
         img{
             top: 8px;
             width: 40px;
             aspect-ratio: 1/1;
         }
     }
-    @media (max-width: $breakpoint-xs) {
+    @media (max-width: var.$breakpoint-xs) {
         img{
             top: 14px;
             width: 30px;

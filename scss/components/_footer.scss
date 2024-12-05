@@ -1,24 +1,20 @@
 footer{
     text-align: center;
-    padding: $spacing 0 $spacing-lg;
-    @media (max-width: $breakpoint-xs) {
-        margin: $spacing-xxl 0 0;
-    }
 }
 
-.copyright{
-    width: max-content;
-    margin: 0 auto;
-    height: max-content;
-    > :first-child{
-        display: flex;
-        gap: $spacing-xs;
-        justify-content: center;
-        align-items: center;
-        margin: 0 0 $spacing;
-    }
-    span{
-        position: relative;
-        top: 2px;
-    }
-}
+// .copyright{
+//     width: max-content;
+//     margin: 0 auto;
+//     height: max-content;
+//     > :first-child{
+//         display: flex;
+//         gap: $spacing-xs;
+//         justify-content: center;
+//         align-items: center;
+//         margin: 0 0 $spacing;
+//     }
+//     span{
+//         position: relative;
+//         top: 2px;
+//     }
+// }

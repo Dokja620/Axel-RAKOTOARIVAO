@@ -1,5 +1,5 @@
 import { component$ } from '@builder.io/qwik';
-import beaming from "/public/media/fluent/slightly_smiling_face_flat.svg";
+import Beaming from "/public/media/fluent/slightly_smiling_face_flat.svg?jsx";
 import { Animate } from '~/components/qwik-animate/animate';
 // First section | Introducing Axel
 
@@ -9,8 +9,7 @@ export default component$(() => {
             <div class="bio">
                 <Animate class="info" animationOptions="@sl-y!_ease-out-back_child-ascend-up_lv-down+++_delay-6 @fd">
                     <h1>
-                        <span lang="fr">Hey <span class="emoji"><img src={beaming} alt="beaming face fluent emoji icon" height={50} width={50}/></span>! Je suis</span>
-                        <span lang="en">Hi <span class="emoji"><img src={beaming} alt="beaming face fluent emoji icon" height={50} width={50}/></span>! I am</span>
+                        <span lang="fr">Hey <span class="emoji"><Beaming/></span>! Je suis</span>
                     </h1>
                     <h1>Axel RAKOTOARIVAO,</h1>
                     <h1>
