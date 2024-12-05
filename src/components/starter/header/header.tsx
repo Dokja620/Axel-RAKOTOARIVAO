@@ -5,12 +5,12 @@ export default component$(() => {
         <header>
             <nav>
                 <a href="#top">
-                    Axel Diary
+                    Axel R.
                 </a>
 
                 <div class="lang">
-                    <p>FR</p>
-                    <p>EN</p>
+                    <p data-check="french">FR</p>
+                    <p data-check="english">EN</p>
 
                     <input type="checkbox" name="lang-switch" id="lang-switch" />
                 </div>
