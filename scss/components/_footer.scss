@@ -1,20 +1,23 @@
+@use '../shared';
+
 footer{
     text-align: center;
+    padding: shared.$spacing-xxl shared.$spacing shared.$spacing-md;
 }
 
-// .copyright{
-//     width: max-content;
-//     margin: 0 auto;
-//     height: max-content;
-//     > :first-child{
-//         display: flex;
-//         gap: $spacing-xs;
-//         justify-content: center;
-//         align-items: center;
-//         margin: 0 0 $spacing;
-//     }
-//     span{
-//         position: relative;
-//         top: 2px;
-//     }
-// }
+.copyright{
+    width: max-content;
+    margin: 0 auto;
+    height: max-content;
+    > :first-child{
+        display: flex;
+        gap: shared.$spacing-xs;
+        justify-content: center;
+        align-items: center;
+        margin: 0 0 shared.$spacing-xs;
+    }
+    span{
+        position: relative;
+        top: 2px;
+    }
+}

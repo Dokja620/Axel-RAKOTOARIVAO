@@ -1,108 +1,50 @@
 import { component$ } from '@builder.io/qwik';
-// does imgs
-import bolt from '/public/media/skill/bolt.svg';
-import globe from '/public/media/skill/globe.svg';
-import puzzle from '/public/media/skill/puzzle.svg';
-import test from '/public/media/skill/test.svg';
-import users from '/public/media/skill/users.svg';
-import team from '/public/media/skill/team.svg';
-
-// tech stack
-import html from '/public/media/techs/devicon--html5.svg';
-import css from '/public/media/techs/logos--css3.svg';
-import javascript from '/public/media/techs/logos--javascript.svg';
-import qwik from '/public/media/techs/logos--qwik.svg';
-import react from '/public/media/techs/logos--react.svg';
-import alpine from '/public/media/techs/logos--alpinejs.svg';
-import bun from '/public/media/techs/logos--bun.svg';
-import gulp from '/public/media/techs/logos--gulp.svg';
-import postcss from '/public/media/techs/logos--postcss.svg';
-import sass from '/public/media/techs/logos--sass.svg';
-import git from '/public/media/techs/logos--git.svg';
 
 // Fluent emoji
-import space from '/public/media/fluent/rocket_flat.svg';
-import eyes from '/public/media/fluent/eyes_flat.svg';
+import Laptop from '/public/media/fluent/desktop_computer_color.svg?jsx';
 
-// Second section | What do I do ?
+// Techs icons
+import Html from '/public/media/techs/icons--html.svg?jsx';
+import Sass from '/public/media/techs/icons--sass.svg?jsx';
+import Typescript from '/public/media/techs/icons--typescript.svg?jsx';
+import Git from '/public/media/techs/icons--git.svg?jsx';
+import Bun from '/public/media/techs/icons--bun-dark.svg?jsx';
+import Svelte from '/public/media/techs/icons--svelte.svg?jsx';
+import React from '/public/media/techs/icons--react-dark.svg?jsx';
+import Cloudflare from '/public/media/techs/icons--cloudflare-dark.svg?jsx';
+
+// Tech stack items
+const techStack = [
+  { Icon: Html, name: 'HTML', description: 'Markup Language' },
+  { Icon: Sass, name: 'Sass', description: 'CSS Preprocessor' },
+  { Icon: Typescript, name: 'TypeScript', description: 'Typed JavaScript' },
+  { Icon: Git, name: 'Git', description: 'Version Control' },
+  { Icon: Bun, name: 'Bun', description: 'JS Runtime' },
+  { Icon: Svelte, name: 'Svelte', description: 'Reactive Framework' },
+  { Icon: React, name: 'React', description: 'Dynamic Library' },
+  { Icon: React, name: 'Shadcn', description: 'UI Components' },
+  { Icon: React, name: 'PocketBase', description: 'Backend Platform' },
+  { Icon: Cloudflare, name: 'Cloudflare', description: 'Edge Network' },
+];
 
 export default component$(() => {
-    return (
-        <section id="skill" class="container">
-            <h2 style={{textAlign: "center"}}>Les technologies que j'utilise <span class="emoji"><img src={space} alt="space ship fluent emoji icon" width={50} height={50}/></span></h2>
-            <div class="tech">
-                <ul>
-                    <li><span><img src={html} title='html5' alt="icon html5" width={65} height={65}/></span></li>
-                    <li><span><img src={css} title='css3' alt="icon css3" width={72} height={72}/></span></li>
-                    <li><span><img src={javascript} title='javascript' alt="icon javascript" width={60} height={60}/></span></li>
-                    <li><span><img src={sass} title='sass' alt="icon sass" width={65} height={65}/></span></li>
-                    <li><span><img src={qwik} title='qwik js' alt="icon qwik" width={62} height={62}/></span></li>
-                    <li><span><img src={react} title='react js' alt="icon react" width={65} height={65}/></span></li>
-                    <li><span><img src={alpine} title='alpine js' alt="icon alpine" width={100} height={100}/></span></li>
-                    <li><span><img src={bun} title='bun' alt="icon bun" width={65} height={65}/></span></li>
-                    <li><span><img src={git} title='git' alt="icon git" width={65} height={65}/></span></li>
-                    <li><span><img src={gulp} title='gulp' alt="icon gulp" width={65} height={65}/></span></li>
-                    <li><span><img src={postcss} title='postcss' alt="icon postcss" width={65} height={65}/></span></li>
-                </ul>
+  return (
+    <section id="skill" class="container">
+      <div class="title">
+        <h3>My Tech Stack</h3>
+        <Laptop />
+      </div>
+      <div class="techno">
+        {techStack.map(({ Icon, name, description }) => (
+          <div class="tech">
+            <Icon />
+            <div class="descr">
+              <h5>{name}</h5>
+              <p>{description}</p>
             </div>
-            <div class="do">
-                <h2>Ce que je fais ? <span class="emoji"><img src={eyes} alt="eyes fluent emoji icon" width={50} height={50}/></span></h2>
-                <p>Je crée des interfaces réactives pour une expérience utilisateur intuitive et fluide.</p>
-                <div class="list">
-                    <div class="skill">
-                        <span class="users"><img src={users} alt="users icon" width={75} height={75}/></span>
-                        <h4>UI/UX Modernes</h4>
-                        <p>Je crée des interfaces utilisateur modernes et esthétiques qui captivent les utilisateurs et renforcent la présence en ligne de votre entreprise.</p>
-                    </div>
-                    <div class="skill">
-                        <span class="bolt"><img src={bolt} alt="bolt icon" width={75} height={75}/></span>
-                        <h4>Performances Optimisées</h4>
-                        <p>J'optimise les performances des sites web pour garantir une expérience utilisateur rapide et fluide, augmentant ainsi l'engagement et la satisfaction des visiteurs.</p>
-                    </div>
-                    <div class="skill">
-                        <span class="access"><img src={globe} alt="globe icon" width={75} height={75}/></span>
-                        <h4>Accessibilité Améliorée</h4>
-                        <p>Je m'assure que votre site web est accessible à tous, ce qui élargit votre audience et renforce votre réputation en tant qu'entreprise inclusive.</p>
-                    </div>
-                    <div class="skill">
-                        <span class="test"><img src={test} alt="test icon" width={75} height={75}/></span>
-                        <h4>Tests Rigoureux</h4>
-                        <p>Je réalise des tests approfondis pour garantir la qualité et la fiabilité de votre application web, assurant une expérience utilisateur sans faille.</p>
-                    </div>
-                    <div class="skill">
-                        <span class="team"><img src={team} alt="collaboration icon" width={75} height={75}/></span>
-                        <h4>Collaboration Efficace</h4>
-                        <p>Je collabore étroitement avec votre équipe pour traduire vos idées en solutions web fonctionnelles et esthétiques, livrées dans les délais et selon vos spécifications.</p>
-                    </div>
-                    <div class="skill">
-                        <span class="puzzle"><img src={puzzle} alt="puzzle icon" width={75} height={75}/></span>
-                        <h4>Solutions Personnalisées</h4>
-                        <p>Je crée des solutions web sur mesure adaptées à vos besoins spécifiques, garantissant ainsi des résultats qui répondent pleinement à vos objectifs et exigences.</p>
-                    </div>
-                </div>
-            </div>
-            {/* // rectangles background */}
-            <div class="background second">
-                <div class="frame-box">
-                    <div class="frame"></div>
-                </div>
-                <div class="frame-box">
-                    <div class="frame"></div>
-                    <div class="frame"></div>
-                </div>
-                <div class="frame-box">
-                    <div class="frame"></div>
-                    <div class="frame"></div>
-                    <div class="frame"></div>
-                </div>
-                <div class="frame-box">
-                    <div class="frame"></div>
-                    <div class="frame"></div>
-                </div>
-                <div class="frame-box">
-                    <div class="frame"></div>
-                </div>
-            </div>
-        </section>
-    );
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 });

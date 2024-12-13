@@ -1,0 +1,33 @@
+@use '../shared';
+
+#cando{
+    margin-top: calc(shared.$spacing-xxl * 2);
+    
+    .cores{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: shared.$spacing;
+        @media (max-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }    
+        @media (max-width: 475px) {
+            grid-template-columns: repeat(1, 1fr);
+        }    
+    }
+
+    .card{
+        padding: shared.$spacing;
+        @include shared.glass(255, 0.1);
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        svg{
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: scale(3);
+            z-index: -1;
+            opacity: 0.15;
+        }
+    }
+}

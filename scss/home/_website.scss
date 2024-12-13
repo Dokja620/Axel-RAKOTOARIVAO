@@ -1,136 +1,39 @@
+@use '../shared';
+
 #website{
-    min-height: 100vh;
-    display: grid;
-    place-content: center;
-    margin: 10% 0;
-}
+    margin-top: calc(shared.$spacing-xxl * 2);
 
-.preview{
-    max-width: 1280px;
-    width: 80vw;
-    min-width: 300px;
-    // width: 90%;
-    margin: 0 auto;
-    height: 80vh;
-    background: red;
-    border-radius: $spacing-lg;
-    padding: $spacing-lg;
-    display: flex;
-    align-items: flex-end;
-    position: relative;
-    .title{
-        margin: 0 0 $spacing;
-        h2{
-            text-shadow: #000 0px 0px 5px, #000 0px 0px 20px;
-        }
-        p{
-            text-shadow: #000 0px 0px 2px, #000 0px 0px 6px, #000 0px 0px 10px;
-            font-weight: 400;
-        }
-        span{
-            color: var(--celestial-blue);
-        }
+    .website{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: shared.$spacing-lg;
     }
-    .description p{
-        background: color-mix(in srgb, var(--dark-black), transparent 50%);
-        padding: $spacing-xs;
-        border-radius: $spacing;
-    }
-    .links{
-        margin: $spacing 0 0; 
-        display: flex;
-        gap: $spacing;
-    }
-    a{
-        font-weight: 100;
-        background: color-mix(in srgb, var(--dark-black), transparent 50%);
-        padding: 8px 42px 8px 16px;
-        border: 2px solid var(--lavender-web);
-        border-radius: $spacing-lg;
-        position: relative;
-        span{
-            position: absolute;
-            top: 8px;
-            right: 12px;
-        }
-    }
-    p{
-        width: 40%;
-        min-width: 275px;
-    }
-}
 
-.navigate{
-    position: absolute;
-    bottom: 50px;
-    right: 0;
-    background: hsla(250,100%,38%,1);
-    padding: 16px 24px;
-    border-radius: $spacing 0 0 $spacing;
-    display: flex;
-    gap: $spacing-lg;
-    z-index: 2;
-    button{
-        width: 20px;
-        aspect-ratio: 1/1;
-        border-top: 5px solid white;
-        border-right: 5px solid white;
-        border-bottom: none;
-        border-left: none;
-        background: none;
-        transform: rotate(45deg);
-        cursor: pointer;
-        &.prev{
-            border-right: none;
-            border-left: 5px solid white;
-            transform: rotate(-45deg);
+    .card{
+        .illustration{
+            width: 100%;
+            height: fit-content;
+            overflow: hidden;
+            position: relative;
+            img{
+                width: 100%;
+                height: 225px;
+                object-fit: cover;
+                border-radius: shared.$spacing;
+            }
+            ul{
+                position: absolute;
+                display: flex;
+                gap: 4px;
+                bottom: shared.$spacing-xs;
+                left: shared.$spacing-xs;
+                li{
+                    background: #000;
+                    @include shared.glass(100, 0.5);
+                    padding: 0 14px;
+                    border-radius: shared.$spacing-xs;
+                }
+            }
         }
     }
-}
-
-// Step switching
-[active-step="1"]> div [current-step="1"],
-[active-step="2"]> div [current-step="2"],
-[active-step="3"]> div [current-step="3"],
-[active-step="4"]> div [current-step="4"],
-[active-step="5"]> div [current-step="5"] {
-    display: block;
-}
-[current-step]{
-    display: none;
-}
-
-// Background changes
-.preview{
-    transition: .25s all ease;
-    position: relative;
-    overflow: hidden;
-    &::after{
-        top: 0;
-        left: 0;
-        position: absolute;
-        content: '';
-        width: 100%;
-        height: 100%;
-        background: hsla(0, 0%, 0%, 0);
-        z-index: 1;
-    }
-    .content{
-        z-index: 2;
-    }
-}
-[active-step="1"] .preview{
-    background: #000 url('/public/media/bg-proj/malala.webp') top center/cover no-repeat;
-}
-[active-step="2"] .preview{
-    background: #000 url('/public/media/bg-proj/tour.webp') 70% 20%/cover no-repeat;
-}
-[active-step="3"] .preview{
-    background: #000 url('/public/media/bg-proj/bat.webp') right/cover no-repeat;
-}
-[active-step="4"] .preview{
-    background: #000 url('/public/media/bg-proj/pant.webp') left/cover no-repeat;
-}
-[active-step="5"] .preview{
-    background: #000 url('/public/media/bg-proj/sup.webp') center/cover no-repeat;
 }

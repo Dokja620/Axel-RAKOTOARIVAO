@@ -1,5 +1,5 @@
 import { component$ } from '@builder.io/qwik';
-import Beaming from "/public/media/fluent/slightly_smiling_face_flat.svg?jsx";
+import Beaming from "/public/media/fluent/beaming_face_with_smiling_eyes_color.svg?jsx";
 import { Animate } from '~/components/qwik-animate/animate';
 // First section | Introducing Axel
 
@@ -9,62 +9,41 @@ export default component$(() => {
             <div class="bio">
                 <Animate class="info" animationOptions="@sl-y!_ease-out-back_child-ascend-up_lv-down+++_delay-6 @fd">
                     <h1>
-                        <span lang="fr">Hey <span class="emoji"><Beaming/></span>! Je suis</span>
+                        Hey <span class="emoji"><Beaming/></span>! I am
                     </h1>
                     <h1>Axel RAKOTOARIVAO,</h1>
                     <h1>
-                        
-                        <span lang="fr">Développeur Front-End</span>
-                        <span lang="en">a Front End Developer</span>
-                        
+                        a Front End Developer
                     </h1>
                     <p>
-                        <span lang="fr">
-                            Spécialisé dans la conception de sites web captivants, 
-                            utilisant React JS, Qwik et Alpine.js. Mon objectif 
-                            principal est de créer des expériences utilisateur 
-                            fluides et des interfaces intuitives. Chaque projet 
-                            que je réalise vise à élever les normes d'engagement 
-                            et de qualité.
-                        </span>
-                        <span lang="en">
-                            Specializing in designing captivating websites using 
-                            React JS, Qwik, and Alpine.js, my primary goal is to 
-                            create seamless user experiences and intuitive interfaces. 
-                            Each project I undertake aims to elevate the standards 
-                            of engagement and quality.
-                        </span>
+                        Mon objectif principal est de créer des expériences utilisateur 
+                        fluides et des interfaces intuitives.
                     </p>
-                    <div class="get-in-touch">
-                        <button>
-                            <span lang="fr">Me contacter</span>
-                            <span lang="en">Reach me</span>
-                        </button>
-                    </div>
+                    <a href="#form">Me contacter</a>
                 </Animate>
             </div>
 
             
             {/* // rectangles background */}
-            <div class="background">
-                <Animate class="frame-box" animationOptions="@sc-in_child-ascend-down+++">
-                    <div class="frame"></div>
+            <div class="patern">
+                <Animate class="parent-box" animationOptions="@sc-in_child-ascend-down+++">
+                    <div class="box"></div>
                 </Animate>
-                <Animate class="frame-box" animationOptions="@sc-in_child-ascend-down+++">
-                    <div class="frame"></div>
-                    <div class="frame"></div>
+                <Animate class="parent-box" animationOptions="@sc-in_child-ascend-down+++">
+                    <div class="box"></div>
+                    <div class="box"></div>
                 </Animate>
-                <Animate class="frame-box" animationOptions="@sc-in_child-ascend-down+++">
-                    <div class="frame"></div>
-                    <div class="frame"></div>
-                    <div class="frame"></div>
+                <Animate class="parent-box" animationOptions="@sc-in_child-ascend-down+++">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
                 </Animate>
-                <Animate class="frame-box" animationOptions="@sc-in_child-ascend-down+++">
-                    <div class="frame"></div>
-                    <div class="frame"></div>
+                <Animate class="parent-box" animationOptions="@sc-in_child-ascend-down+++">
+                    <div class="box"></div>
+                    <div class="box"></div>
                 </Animate>
-                <Animate class="frame-box" animationOptions="@sc-in_child-ascend-down+++">
-                    <div class="frame"></div>
+                <Animate class="parent-box" animationOptions="@sc-in_child-ascend-down+++">
+                    <div class="box"></div>
                 </Animate>
             </div>
         </section>

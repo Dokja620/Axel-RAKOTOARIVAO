@@ -1,0 +1,19 @@
+@use './var';
+@use './mixins';
+
+.patern{
+    display: grid;
+    justify-content: center;
+}
+
+.parent-box{
+    display: flex;
+    justify-content: center;
+}
+
+.box{
+    @include mixins.boxSize(225px, 2, 1);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var.$spacing;
+    margin: var.$spacing-xs;
+}

@@ -1,85 +1,62 @@
-import { component$, useStore, $ } from '@builder.io/qwik';
-import link from "/public/media/link.svg";
-import github from "/public/media/social/github.svg";
+import { component$ } from '@builder.io/qwik';
+
+// Fluent emoji
+import Globe from '/public/media/fluent/globe_with_meridians_color.svg?jsx';
+
+// Website preview
+import Malala from '/public/media/bg-proj/malala.webp?jsx';
+import Vacances from '/public/media/bg-proj/malala.webp?jsx';
+import Real from '/public/media/bg-proj/malala.webp?jsx';
 
 export default component$(() => {
-    const state = useStore({ activeStep: 1 });
-
-    const incrementStep = $(() => {
-        state.activeStep = state.activeStep < 5 ? state.activeStep + 1 : 1;
-    });
-
-    const decrementStep = $(() => {
-        state.activeStep = state.activeStep > 1 ? state.activeStep - 1 : 5;
-    });
-
-    const contents = [
-        {
-            title: 'Malala evasion',
-            description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos facilis molestias excepturi pariatur sit incidunt voluptatum. Quae ullam voluptatibus aliquid labore voluptate laborum! Tempore saepe reprehenderit earum alias vitae magni?',
-            location: 'Ohayo Dev & Design',
-            project: '',
-            link: 'aze.com',
-            github: 'aze.com',
+    const websites = [
+        {   
+            Image: Malala, 
+            name: 'Malala Evasion', 
+            description: 'Markup Language',
+            tech: ['html', 'sass', 'js'],
+            link: 'web.axel.com'
         },
-        {
-            title: 'Vacances Nosy Be Tour',
-            description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos facilis molestias excepturi pariatur sit incidunt voluptatum. Quae ullam voluptatibus aliquid labore voluptate laborum! Tempore saepe reprehenderit earum alias vitae magni?',
-            location: 'Ohayo Dev & Design',
-            project: '',
-            link: 'aze.com',
-            github: 'aze.com',
+        {   
+            Image: Vacances, 
+            name: 'Vacances Nosy-Be Tour', 
+            description: 'Markup Language',
+            tech: ['react', 'sass'],
+            link: 'web.axel.com'
         },
-        {
-            title: 'Batman',
-            description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos facilis molestias excepturi pariatur sit incidunt voluptatum. Quae ullam voluptatibus aliquid labore voluptate laborum! Tempore saepe reprehenderit earum alias vitae magni?',
-            location: 'SAYNA :',
-            project: 'Projet Fil Rouge',
-            link: 'aze.com',
-            github: 'aze.com',
-        },
-        {
-            title: 'Black Panther',
-            description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos facilis molestias excepturi pariatur sit incidunt voluptatum. Quae ullam voluptatibus aliquid labore voluptate laborum! Tempore saepe reprehenderit earum alias vitae magni?',
-            location: 'SAYNA :',
-            project: 'Projet Fil Rouge - Evaluation',
-            link: 'aze.com',
-            github: 'aze.com',
-        },
-        {
-            title: 'Superman',
-            description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos facilis molestias excepturi pariatur sit incidunt voluptatum. Quae ullam voluptatibus aliquid labore voluptate laborum! Tempore saepe reprehenderit earum alias vitae magni?',
-            location: 'SAYNA :',
-            project: 'Evaluation finale Front End',
-            link: 'aze.com',
-            github: 'aze.com',
+        {   
+            Image: Real, 
+            name: 'Real mission movement', 
+            description: 'Markup Language',
+            tech: ['html', 'sass', 'js'],
+            link: 'web.axel.com'
         },
     ];
-
+      
     return (
-        <section id="website" active-step={state.activeStep}>
-            <div class="preview">
-                {contents.map((content, index) => (
-                    <div key={index} class="content" current-step={index + 1}>
+        <section id="website" class="container">
+            <div class="title">
+                <h3>Websites I worked on</h3>
+                <Globe />
+            </div>
+            <div class="website">
+                {websites.map(({ Image, name, description, tech, link }) => (
+                    <div class="card">
+                        <a href={link} class="illustration">
+                            <Image />
+                            <ul>
+                                {tech.map((item) => (
+                                    <li key={item}>{item}</li>
+                                ))}
+                            </ul>
+                        </a>
                         <div class="infos">
-                            <div class="title">
-                                <h2>{content.title}</h2>
-                                <p><span>{content.location}</span> {content.project}</p>
-                            </div>
-                            <div class="description">
-                                <p>{content.description}</p>
-                            </div>
-                            <div class="links">
-                                <a href={content.link} target="_blank">voir le site <span><img src={link} alt="redirecting to icon" width={20} height={20} /></span></a>
-                                <a href={content.github} target="_blank">voir le repos <span><img src={github} alt="redirecting to icon" width={20} height={20} /></span></a>
-                            </div>
+                            <h5>{name}</h5>
+                            <p>{description}</p>
                         </div>
+                        <a href={link}>Visit website</a>
                     </div>
                 ))}
-                <div class="navigate">
-                    <button class="prev" onClick$={decrementStep}></button>
-                    <button class="next" onClick$={incrementStep}></button>
-                </div>
             </div>
         </section>
     );
