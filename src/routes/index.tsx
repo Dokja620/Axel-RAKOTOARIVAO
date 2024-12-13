@@ -3,18 +3,16 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 import Intro from "./section/intro/intro";
 import Techs from "./section/techs/techs";
 import Cando from "./section/cando/cando";
-import Website from "./section/website/website";
-// import Form from "./section/form/form";
-// import Project from "./section/project/project";
+import Projects from "./section/projects/projects";
+import Form from "./section/form/form";
 
 export default component$(() => (
   <>
     <Intro />
     <Techs />
     <Cando />
-    <Website />
-    {/* <Project/>
-        <Form/> */}
+    <Projects />
+    <Form />
     {/* scroll and get to top button */}
     <div class="fixed">
       <div class="scroll-more"></div>

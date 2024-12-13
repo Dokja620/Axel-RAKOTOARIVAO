@@ -1,0 +1,55 @@
+@use "../shared";
+
+#projects {
+  margin-top: calc(shared.$spacing-xxl * 2);
+  position: relative;
+
+  .project {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: shared.$spacing-lg;
+  }
+
+  .card {
+    .illustration {
+      width: 100%;
+      height: fit-content;
+      overflow: hidden;
+      position: relative;
+      img {
+        width: 100%;
+        height: 225px;
+        object-fit: cover;
+        border-radius: shared.$spacing;
+      }
+      ul {
+        position: absolute;
+        display: flex;
+        gap: 4px;
+        bottom: shared.$spacing-xs;
+        left: shared.$spacing-xs;
+        li {
+          background: #000;
+          @include shared.glass(100, 0.5);
+          padding: 0 14px;
+          border-radius: shared.$spacing-xs;
+        }
+      }
+    }
+    .see-more {
+      display: block;
+      width: fit-content;
+      margin: shared.$spacing-xs 0 0;
+      border-bottom: 2px solid var(--lavender-web);
+    }
+  }
+
+  .patern {
+    position: absolute;
+    top: -15%;
+    right: 0;
+    opacity: 0.35;
+    transform: rotate(40deg) scale(1.75);
+    z-index: -1;
+  }
+}
