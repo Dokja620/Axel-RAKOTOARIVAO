@@ -1,0 +1,17 @@
+@use "../shared";
+
+#techs {
+  .techno {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 230px);
+    gap: shared.$spacing-xs;
+    justify-content: center;
+  }
+
+  .tech {
+    display: flex;
+    gap: shared.$spacing-xs;
+    @include shared.glass(255, 0.1);
+    padding: shared.$spacing-xs;
+  }
+}

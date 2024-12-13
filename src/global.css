@@ -314,13 +314,13 @@ footer {
   transform: rotate(45deg);
 }
 
-#skill .techno {
+#techs .techno {
   display: grid;
   grid-template-columns: repeat(auto-fit, 230px);
   gap: 0.6666666667em;
   justify-content: center;
 }
-#skill .tech {
+#techs .tech {
   display: flex;
   gap: 0.6666666667em;
   background: rgba(255, 255, 255, 0.1);
