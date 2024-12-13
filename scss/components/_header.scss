@@ -1,77 +1,77 @@
-@use '../shared';
+@use "../shared";
 
 // Just the header
-header{
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 5;
-    padding: shared.$spacing;
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+  padding: shared.$spacing;
 }
 
-
 // Navbar container
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: shared.$spacing-lg;
-    padding: shared.$spacing-xs shared.$spacing;
-    @include shared.glassDouble();
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: shared.$spacing-lg;
+  padding: shared.$spacing-xs shared.$spacing;
+  @include shared.glassDouble();
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
 
-    .lang{
-        position: relative;
-        display: flex;
-        gap: shared.$spacing;
-        input{
-            position: absolute;
-            opacity: 0;
-            cursor: pointer;
-            z-index: 2;
-            &::before{
-                content: "";
-                position: absolute;
-                top: -5px;
-                left: -6px;
-                width: 70px;
-                height: 30px;
-            }
-        }
+  .lang {
+    position: relative;
+    display: flex;
+    gap: shared.$spacing;
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      z-index: 2;
+      &::before {
+        content: "";
+        position: absolute;
+        top: -5px;
+        left: -6px;
+        width: 70px;
+        height: 30px;
+      }
     }
+  }
 }
 
 // Navbar logo name
-nav{
-    a{
-        font-weight: 700;
-    }
+nav {
+  a {
+    font-weight: 700;
+  }
 }
 
 // Language switch
-nav{
-    .lang{
-        p{
-            position: relative;
-            z-index: 1;
-            &::after{
-                content: "";
-                width: calc(100% + 12px);
-                height: calc(100% + 4px);
-                opacity: 0;
-                @include shared.centerAbsolute();
-                @include shared.glass();
-                border-radius: shared.$spacing-xs;
-                z-index: -1;
-                transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-            }
-        }
+nav {
+  .lang {
+    p {
+      position: relative;
+      z-index: 1;
+      &::after {
+        content: "";
+        width: calc(100% + 12px);
+        height: calc(100% + 4px);
+        opacity: 0;
+        @include shared.centerAbsolute();
+        @include shared.glass();
+        border-radius: shared.$spacing-xs;
+        z-index: -1;
+        transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
     }
+  }
 }
 
 // Lang switch active/inactive
-nav:has(.lang input:checked) .lang p[data-check="french"]::after{
-    opacity: 1;
+nav:has(.lang input:checked) .lang p[data-check="french"]::after {
+  opacity: 1;
 }
-nav:has(.lang input:not(:checked)) .lang p[data-check="english"]::after{
-    opacity: 1;
+nav:has(.lang input:not(:checked)) .lang p[data-check="english"]::after {
+  opacity: 1;
 }
