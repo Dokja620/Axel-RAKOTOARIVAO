@@ -11,6 +11,7 @@ import Git from '/public/media/techs/icons--git.svg?jsx';
 import Bun from '/public/media/techs/icons--bun-dark.svg?jsx';
 import Svelte from '/public/media/techs/icons--svelte.svg?jsx';
 import React from '/public/media/techs/icons--react-dark.svg?jsx';
+import Supabase from '/public/media/techs/icons--supabase-dark.svg?jsx';
 import Cloudflare from '/public/media/techs/icons--cloudflare-dark.svg?jsx';
 
 // Tech stack items
@@ -22,8 +23,12 @@ const techStack = [
   { Icon: Bun, name: 'Bun', description: 'JS Runtime' },
   { Icon: Svelte, name: 'Svelte', description: 'Reactive Framework' },
   { Icon: React, name: 'React', description: 'Dynamic Library' },
-  { Icon: React, name: 'Shadcn', description: 'UI Components' },
+  { Icon: React, name: 'Qwik', description: 'Dynamic Library' },
+  { Icon: React, name: 'VueJS', description: 'Dynamic Library' },
+  { Icon: React, name: 'Alpine', description: 'Dynamic Library' },
+  { Icon: Supabase, name: 'Supbase', description: 'Backend Platform' },
   { Icon: React, name: 'PocketBase', description: 'Backend Platform' },
+  { Icon: React, name: 'Shadcn', description: 'Backend Platform' },
   { Icon: Cloudflare, name: 'Cloudflare', description: 'Edge Network' },
 ];
 
