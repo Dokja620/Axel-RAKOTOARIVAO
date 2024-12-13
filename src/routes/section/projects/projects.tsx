@@ -13,6 +13,7 @@ export default component$(() => {
     {
       Image: Malala,
       name: "Client Website",
+      alt: "Client website illustration",
       description:
         "Custom, high-performance websites designed to enhance clients' online presence.",
       count: 5,
@@ -21,6 +22,7 @@ export default component$(() => {
     {
       Image: Vacances,
       name: "SaaS Projects",
+      alt: "SaaS illustration",
       description:
         "Scalable software solutions tailored for businesses, delivered as subscription-based platforms.",
       count: 6,
@@ -29,6 +31,7 @@ export default component$(() => {
     {
       Image: Real,
       name: "Other Projects",
+      alt: "Projects Illustration",
       description:
         "Unique and innovative solutions demonstrating creativity and technical expertise.",
       count: 3,
@@ -43,7 +46,7 @@ export default component$(() => {
         <Files />
       </div>
       <div class="project">
-        {websites.map(({ Image, name, description, count, link }) => (
+        {websites.map(({ Image, name, alt, description, count, link }) => (
           <div class="card" key={name}>
             <a href={link} class="illustration">
               <Image />
@@ -56,7 +59,7 @@ export default component$(() => {
               <h5>{name}</h5>
               <p>{description}</p>
             </div>
-            <a href={link} class="see-more">
+            <a href={link} class="see-more" alt={alt}>
               See more +
             </a>
           </div>

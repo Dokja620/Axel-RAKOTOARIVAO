@@ -45,6 +45,7 @@ export default component$(() => {
             href="https://github.com/Dokja620"
             target="_blank"
             data-name="Github"
+            aria-label="Link that redirects to my Github"
           >
             <Github />
           </a>
@@ -52,6 +53,7 @@ export default component$(() => {
             href="https://www.linkedin.com/in/diary-axel-rakotoarivao-356532268/"
             target="_blank"
             data-name="Linkedin"
+            aria-label="Link that redirects to my Linkedin"
           >
             <Linkedin />
           </a>
@@ -59,6 +61,7 @@ export default component$(() => {
             href="https://api.whatsapp.com/send?phone=261334144813"
             target="_blank"
             data-name="Whatsapp"
+            aria-label="Link that redirects to my Whatsapp"
           >
             <Whatsapp />
           </a>

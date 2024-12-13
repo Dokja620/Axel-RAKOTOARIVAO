@@ -11,6 +11,7 @@ export default component$(() => {
           <p data-check="english">EN</p>
 
           <input type="checkbox" name="lang-switch" id="lang-switch" />
+          <label for="lang-switch"></label>
         </div>
       </nav>
     </header>
