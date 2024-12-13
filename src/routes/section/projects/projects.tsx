@@ -49,7 +49,7 @@ export default component$(() => {
         {websites.map(({ Image, name, alt, description, count, link }) => (
           <div class="card" key={name}>
             <a href={link} class="illustration">
-              <Image />
+              <Image alt={alt} />
               <ul>
                 <li>Count</li>
                 <li>0{count}</li>
@@ -59,7 +59,7 @@ export default component$(() => {
               <h5>{name}</h5>
               <p>{description}</p>
             </div>
-            <a href={link} class="see-more" alt={alt}>
+            <a href={link} class="see-more">
               See more +
             </a>
           </div>
